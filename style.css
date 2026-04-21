@@ -42,11 +42,16 @@
 
 /* NAVBAR */
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 50px;
-  background: #000; /* dark navbar */
+   background-color: #1a1a1a; /* Sleek dark charcoal */
+    border-bottom: 3px solid #ffcc00; /* Thin yellow line to match your buttons */
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5%;
+    width: 100%;
+    box-sizing: border-box;
+}
+.background {
+  display: none;
 }
 
 /* logo */
@@ -55,15 +60,6 @@ header {
   height: 60px;
   border-radius: 50%;
 }
-
-/* NAV*/
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
 /* BUTTON para sa  explore mene*/
 .btn {
   background: orange;
@@ -81,25 +77,7 @@ nav a {
   border-radius: 20px;
   cursor: pointer;
 }
-.nav-link.order-button {
-  background-color: #ffd700; /* A bright golden yellow */
-  color: #000; /* Black text for contrast */
-  padding: 10px 25px; /* Vertical and Horizontal padding */
-  border-radius: 50px; /* This creates the oval/pill shape */
-  text-decoration: none; /* Removes the link underline */
-  font-weight: bold;
-  display: inline-block; /* Ensures padding and width apply correctly */
-}
-
 /* menu html*/
-.body {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("Photos/body.jpg");
-
-  background-size: cover;
-  background-position: center;
-}
 .menus {
   margin: 20px;
   padding: 0px;
@@ -230,7 +208,11 @@ a:hover {
 body {
     font-family: Arial;
     margin: 0;
-    background: #111; 
+    min-height: 100vh;
+    background:
+    
+      url("Photos/body.jpg") no-repeat center center fixed;
+    background-size: cover;
 }
 
 h1 {
@@ -299,4 +281,59 @@ html {
     position: absolute;
     width: 100%;
     height: 100%;
+}
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    
+    /* This link is a high-quality nature photo from Unsplash */
+    background-image:
+ url('https://scontent.fmnl11-1.fna.fbcdn.net/v/t39.30808-6/645486646_928051049613718_3938881594716136737_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeED8nZwZb2BBcCVvBAhWoaFjfz9TwIeJgeN_P1PAh4mB3MLto90tUfx6ZJgvKYMIdzng9wGuqeXdH_wdGHw1cpp&_nc_ohc=WtDmFWeXsXUQ7kNvwEdCEPR&_nc_oc=AdqWTZLU3_xG91DqKx1VvY_hCfcLCHCaoIT_zFRZi_Nnzdmo7MhASRvCHMx8lXMw77Q&_nc_zt=23&_nc_ht=scontent.fmnl11-1.fna&_nc_gid=wiypkeMPsYJwFtFeH60BtQ&_nc_ss=7a3a8&oh=00_Af3XKOwb9NV8VvJNaiSwWjPvl852q4kZDd2HQUCFKkPKdw&oe=69ED4BEB');
+    
+    /* The Centering Fix */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    display: flex;
+    flex-direction: column;
+  }
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Pushes Logo to left, Nav to right */
+    align-items: center;
+    padding: 10px 5%;
+    box-sizing: border-box;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffcc00; /* Makes links turn yellow when you point at them */
+}
+.menus {
+    flex: 1; /* Takes up the remaining space below the header */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the cards horizontally */
+    padding-top: 50px;
+}
+
+.det-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Makes cards stack on mobile */
+}
+.menus, .container {
+    padding-top: 100px;
 }
