@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
   </head>
-  <body class="body">
+  <body>
     <header>
       <div class="logo">
         <img
-          src="Photos\logo.jpg"
+          img src = 'https://scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/414728256_380365187715643_1319917961571997362_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeFQUpA0R51jfbXZhayH37dWyGrljN9-icDIauWM336JwDUg88Lc9v2uoi16LPeNoRxWo04MhijL2tsH4rhlP4H2&_nc_ohc=yyvh7cZVRA4Q7kNvwHOjaz-&_nc_oc=Adr4fa6tBtIwdhFAjpkoQKjOBG9gYw7LpzuoV58QZ2EyDozVfSjmOmCKY9M0yH7anUQ&_nc_zt=23&_nc_ht=scontent.fmnl43-1.fna&_nc_gid=PnNcUGiMqzw0FJwfqsg8MA&_nc_ss=7a3a8&oh=00_Af1HJQFCsCyJ1vCJ6YYibBeGzj-l4aoR0Q0qSIIUzLcpow&oe=69ED4A26'
           alt="Logo"
         />
       </div>
