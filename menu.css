@@ -5,34 +5,7 @@
   border-radius: 50%;
 }
 
-/* background */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 50px;
 
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
-
-  background-size: cover;
-  background-position: center;
-}
-
-/* TEXT STYLE */
-.hero-text {
-  color: white;
-  max-width: 50%;
-}
-
-.hero-text h1 {
-  font-size: 50px;
-}
-
-.hero-text h3 {
-  color: orange;
-}
 /* RESET */
 * {
   margin: 0;
@@ -67,7 +40,7 @@ nav a {
 
 
 /* menu html*/
-.body {
+body {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");

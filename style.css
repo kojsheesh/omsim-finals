@@ -294,9 +294,10 @@ body {
     width: 100%;
     
     /* This link is a high-quality nature photo from Unsplash */
-    background-image:
- url('https://scontent.fmnl11-1.fna.fbcdn.net/v/t39.30808-6/645486646_928051049613718_3938881594716136737_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeED8nZwZb2BBcCVvBAhWoaFjfz9TwIeJgeN_P1PAh4mB3MLto90tUfx6ZJgvKYMIdzng9wGuqeXdH_wdGHw1cpp&_nc_ohc=WtDmFWeXsXUQ7kNvwEdCEPR&_nc_oc=AdqWTZLU3_xG91DqKx1VvY_hCfcLCHCaoIT_zFRZi_Nnzdmo7MhASRvCHMx8lXMw77Q&_nc_zt=23&_nc_ht=scontent.fmnl11-1.fna&_nc_gid=wiypkeMPsYJwFtFeH60BtQ&_nc_ss=7a3a8&oh=00_Af3XKOwb9NV8VvJNaiSwWjPvl852q4kZDd2HQUCFKkPKdw&oe=69ED4BEB');
-    
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
+
     /* The Centering Fix */
     background-position: center center;
     background-size: cover;
