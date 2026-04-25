@@ -17,7 +17,7 @@
         <a href="about.php">About</a>
         <a href="menu.php">Menu</a>
         <a href="contact.php">Contact</a>
-        <a href="reservationform.php">Reserve Now</a>
+        <a href="omsim.php">Reserve Now</a>
     </nav>
      
 
