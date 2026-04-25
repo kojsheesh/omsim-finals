@@ -14,7 +14,7 @@
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("Photos/body.jpg");
+    url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
 
   background-size: cover;
   background-position: center;
@@ -172,6 +172,7 @@ header {
   background-color: #f2f1ef9f;
   padding: 18px;
   text-align: center;
+  
 }
 .logpage-text table {
   margin-left: auto;
@@ -222,24 +223,28 @@ h1 {
 }
 
 /* 3 images per row */
+/* 3 images per row grid */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    padding: 20px;
+    grid-template-columns: repeat(3, 1fr); /* This forces exactly 3 columns */
+    gap: 20px; /* Space between the photos */
+    padding: 40px;
+    max-width: 1200px; /* Keeps the gallery from getting too wide */
+    margin: 0 auto; /* Centers the whole gallery on the page */
 }
 
 .gallery img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
+    height: 250px; /* Fixed height makes the grid look uniform */
+    object-fit: cover; /* This crops the images so they don't look squished */
+    border-radius: 8px;
+    border: 1px solid #333; /* Adds that subtle outline seen in your target image */
+    transition: transform 0.3s ease;
 }
 
 .gallery img:hover {
-    transform: scale(1.05);
+    transform: scale(1.02);
+    border-color: orange;
 }
 
 /* zoom */
@@ -289,9 +294,10 @@ body {
     width: 100%;
     
     /* This link is a high-quality nature photo from Unsplash */
-    background-image:
- url('https://scontent.fmnl11-1.fna.fbcdn.net/v/t39.30808-6/645486646_928051049613718_3938881594716136737_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=7b2446&_nc_eui2=AeED8nZwZb2BBcCVvBAhWoaFjfz9TwIeJgeN_P1PAh4mB3MLto90tUfx6ZJgvKYMIdzng9wGuqeXdH_wdGHw1cpp&_nc_ohc=WtDmFWeXsXUQ7kNvwEdCEPR&_nc_oc=AdqWTZLU3_xG91DqKx1VvY_hCfcLCHCaoIT_zFRZi_Nnzdmo7MhASRvCHMx8lXMw77Q&_nc_zt=23&_nc_ht=scontent.fmnl11-1.fna&_nc_gid=wiypkeMPsYJwFtFeH60BtQ&_nc_ss=7a3a8&oh=00_Af3XKOwb9NV8VvJNaiSwWjPvl852q4kZDd2HQUCFKkPKdw&oe=69ED4BEB');
-    
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
+
     /* The Centering Fix */
     background-position: center center;
     background-size: cover;

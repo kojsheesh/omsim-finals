@@ -1,0 +1,62 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Background centering the card */
+body {
+    background-image: url(https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801);
+     background-size: cover;
+  background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* The Card */
+.login-card {
+    background: rgb(206, 206, 206);
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+/* Success Icon */
+.icon {
+    font-size: 3rem;
+    color: #2ecc71;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Styled Link/Button */
+.btn {
+    display: inline-block;
+    background-color: #4e73df;
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    transition: background 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #2e59d9;
+}
