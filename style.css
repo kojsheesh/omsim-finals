@@ -342,3 +342,176 @@ nav a:hover {
 .menus, .container {
     padding-top: 100px;
 }
+/* Root Variables for Branding */
+:root {
+    --mustard-yellow: #E1AD21;
+    --dark-bg: #111111;
+    --card-bg: #1e1e1e;
+    --text-light: #ffffff;
+}
+
+/* General Page Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* --- NEW HEADER STYLE (Black & Gold) --- */
+.main-header {
+    background-color: #111;
+    border-bottom: 3px solid #E1AD21;
+    width: 100%;
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* This is the magic line that pushes them apart */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+.logo-text {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+nav {
+    display: flex;
+    gap: 30px; /* Space between links */
+}
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+nav a.active {
+    color: #E1AD21;
+}
+nav a:hover, nav a.active {
+    color: var(--mustard-yellow);
+}
+
+/* --- CONTACT SECTION LAYOUT --- */
+.contact-page-wrapper {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-header {
+    margin-bottom: 40px;
+}
+
+/* THE LOGO SHRINK FIX */
+.logo-box img {
+    width: 180px; /* Adjust this to make it bigger or smaller */
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 3px solid var(--mustard-yellow);
+}
+
+.contact-header h1 {
+    color: var(--mustard-yellow);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* --- CONTACT CARDS --- */
+.contact-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    background: var(--card-bg);
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 30px;
+    width: 280px;
+    text-decoration: none;
+    color: white;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--mustard-yellow);
+}
+
+.icon-circle {
+    font-size: 2rem;
+    color: var(--mustard-yellow);
+    margin-bottom: 15px;
+}
+
+.fb-link-text {
+    display: inline-block;
+    margin-top: 10px;
+    color: var(--mustard-yellow);
+    font-size: 0.8rem;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between; /* This pushes everything to the right */
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.logo-text {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+
+/* Feedback Button Styling */
+.feedback-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.feedback-btn {
+    display: inline-block;
+    background-color: var(--mustard-yellow);
+    color: #000;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.feedback-btn:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+nav a:hover {
+    color: #E1AD21; /* Mustard Yellow */
+}
+
+/* This keeps the yellow color for the page you are currently on */
+nav a.active {
+    color: #E1AD21;
+}
+.main-header {
+    position: relative;
+    z-index: 1000;
+}
