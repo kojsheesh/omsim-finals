@@ -25,6 +25,7 @@
             <a href="contact.php">Contact</a>
             <a href="omsim.php">Reserve Now</a>
         </nav>
+        
     </header>
     <h1>SIKATAN SIKADA CAFE</h1>
 
