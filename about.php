@@ -22,21 +22,6 @@
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img
-                src="Photos\logo.jpg"
-                alt="Logo" />
-        </div>
-
-        <nav>
-            <a href="index.php">Home</a>
-            <a href="about.php">About</a>
-            <a href="menu.php">Menu</a>
-            <a href="contact.php">Contact</a>
-            <a href="omsim.php">Reserve Now</a>
-        </nav>
-    </header>
     <h1>SIKATAN SIKADA CAFE</h1>
 
     <div class="gallery">
