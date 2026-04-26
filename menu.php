@@ -1,3 +1,6 @@
+<?php
+session_start(); // THIS MUST BE AT THE TOP
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +25,12 @@
       <a href="about.php">About</a>
       <a href="menu.php">Menu</a>
       <a href="contact.php">Contact</a>
-      <a href="omsim.php">Reserve Now</a>
+      <?php if (isset($_SESSION['user_email'])): ?>
+        <a href="omsim.php">Reserve Now</a>
+        <a href="logout.php">Logout</a>
+    <?php else: ?>
+        <a href=" login.php">Login</a>
+      <?php endif; ?>
     </nav>
   </header>
 
@@ -37,7 +45,7 @@
             <p>
               Immerse your group in the true spirit of Sikatan Sikada Café at this signature common table. Directly overlooked by our vibrant, handcrafted yellow sun mural—the symbol of the café's soul and name—this spot blends our favorite industrial-rustic aesthetic with the warmth of shared experiences.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="omsim.php?item=Common%20Table" class="btn">Reserve</a>
           </div>
         </div>
 

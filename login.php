@@ -62,7 +62,12 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
             <a href="about.php">About</a>
             <a href="menu.php">Menu</a>
             <a href="contact.php">Contact</a>
-            <a href="omsim.php">Reserve Now</a>
+            <?php if (isset($_SESSION['user_email'])): ?>
+                <a href="omsim.php">Reserve Now</a>
+                <a href="logout.php" style="color: red;">Logout</a>
+            <?php else: ?>
+                <a href="login.php">Login</a>
+            <?php endif; ?>
         </nav>
     </header>
     <div class="logpage">
@@ -106,7 +111,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
                     </tr>
                     <tr>
                         <td colspan="2">
-          
+
                             <p>------------------- or ----------------------</p>
 
                         </td>
@@ -114,7 +119,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
 
                     <tr>
                         <td colspan="2">
-          
+
                             <a href="<?php echo $client->createAuthUrl(); ?>" style="text-decoration:none;">
                                 <button type="button" style="display: flex; align-items: center; justify-content: center; margin: 20px auto; padding: 10px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">
                                     <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" width="20" style="margin-right: 10px;">
@@ -152,7 +157,8 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
                         //check the entered email and password
                         //is the same from the table users
                         if ($r_login['email'] == $email and $r_login['password'] == $password) {
-                            $_SESSION['uid'] = $r_login['uid'];
+                            $_SESSION['user_email'] = $r_login['email'];
+                            $_SESSION['id'] = $r_login['id'];
                             $_SESSION['session_status'] = 1;
             ?>
                             <script type="text/javascript">

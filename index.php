@@ -1,4 +1,8 @@
 <?php
+session_start(); // THIS MUST BE AT THE TOP
+?>
+
+<?php
 // Best Seller Product Data
 $bestSellers = [
     ["name" => "Sikatan Special Coffee", "price" => 120.00, "badge" => "🔥 Top Pick", "img" => "https://unsplash.com"],
@@ -147,7 +151,13 @@ $bestSellers = [
         <a href="about.php">About</a>
         <a href="menu.php">Menu</a>
         <a href="contact.php">Contact</a>
+        <?php if (isset($_SESSION['user_email'])): ?>
         <a href="omsim.php">Reserve Now</a>
+        <a href="logout.php">Logout</a>
+    <?php else: ?>
+        <a href="login.php">Login</a>
+    <?php endif; ?>
+
     </nav>
 </header>
 
@@ -196,9 +206,6 @@ $bestSellers = [
     }
     setInterval(() => moveSlide(1), 6000); 
 </script>
-<a href="logout.php" style="color: red; font-weight: bold; text-decoration: none;">
-    Logout
-</a>
-		<br/>
+
 </body>
 </html>
