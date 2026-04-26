@@ -19,9 +19,9 @@ $bestSellers = [
             min-height: 100vh;
             display: flex;
             flex-direction: column;
-            padding: 60px 0 40px 0 !important; 
+            padding: 60px 0 40px 0; 
             overflow: hidden;
-            background-image: none !important; 
+            background-image: none; 
         }
 
         /* CENTERED CAROUSEL */
