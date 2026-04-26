@@ -64,7 +64,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
             <a href="contact.php">Contact</a>
             <?php if (isset($_SESSION['user_email'])): ?>
                 <a href="omsim.php">Reserve Now</a>
-                <a href="logout.php" style="color: red;">Logout</a>
+                <a href="logout.php">Logout</a>
             <?php else: ?>
                 <a href="login.php">Login</a>
             <?php endif; ?>
@@ -77,59 +77,42 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
             </div>
             <div class="logpage-text">
                 <h2>LOGIN</h2><br>
-                <table>
+               <table>
                     <tr>
                         <td>Email:</td>
-
                     </tr>
                     <tr>
-
-                        <td colspan="2"><input type="text" name="email" /></td>
+                        <td colspan="2"><input type="email" name="email" placeholder="example@gmail.com" required /></td>
                     </tr>
-
                     <tr>
                         <td>Password:</td>
-
                     </tr>
-
                     <tr>
-
-                        <td colspan="2"><input type="password" name="password" /></td>
+                        <td colspan="2"><input type="password" name="password" required /></td>
                     </tr>
-
                     <tr>
                         <td colspan="2">
                             <br><br>
                             <input type="submit" name="login" value="Log in" />
-
                         </td>
                     </tr>
                     <tr>
-
                         <td> <br>Don't have an account?</td>
                         <td> <br><a href="signup.php">Sign Up</a></td>
                     </tr>
                     <tr>
-                        <td colspan="2">
-
-                            <p>------------------- or ----------------------</p>
-
-                        </td>
+                        <td colspan="2"><p>------------------- or ----------------------</p></td>
                     </tr>
-
                     <tr>
                         <td colspan="2">
-
                             <a href="<?php echo $client->createAuthUrl(); ?>" style="text-decoration:none;">
                                 <button type="button" style="display: flex; align-items: center; justify-content: center; margin: 20px auto; padding: 10px; border: 1px solid #ccc; background: white; border-radius: 4px; cursor: pointer;">
                                     <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" width="20" style="margin-right: 10px;">
                                     Sign in with Google
                                 </button>
                             </a>
-
                         </td>
                     </tr>
-
                 </table>
                 <br />
 

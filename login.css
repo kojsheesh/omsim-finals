@@ -1,0 +1,107 @@
+/* LOGO  */
+.logo img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background: #000; /* dark navbar */
+}
+
+/* logo */
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* NAV*/
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* login */
+.logpage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 50px;
+  justify-content: center;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("Photos/body.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.pic {
+  float: left;
+  height: 400px;
+  width: 200px;
+  background-color: #000000;
+  padding: 18px;
+  background-image: url(Photos/sikatan.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+
+.logpage-text {
+  float: right;
+  height: 400px;
+  width: 400px;
+  background-color: #f2f1ef9f;
+  padding: 18px;
+  text-align: center;
+  
+}
+.logpage-text table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
+  text-align: left;
+}
+
+input[type="email"],
+input[type="password"] {
+  background-color: #d1d1d100;
+  padding: 8px;
+  width: 250px;
+  border: none;
+  border-bottom: #222222 solid;
+  outline: none;
+}
+input[type="submit"] {
+  background: linear-gradient(rgba(0, 128, 0, 0.281), orange);
+  padding: 8px;
+  width: 250px;
+  border-radius: 10px;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: #d1d1d1;
+}
