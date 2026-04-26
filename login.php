@@ -134,7 +134,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
                         echo $mysqli->error;
                         exit();
                     } elseif ($q_login->num_rows == 0) {
-                        echo "Invalid Email or Password.";
+                       echo "<script>alert('Invalid Email or Password. Please try again.');</script>";
                     } else {
                         $r_login = $q_login->fetch_assoc();
                         //check the entered email and password
