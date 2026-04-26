@@ -28,12 +28,12 @@ if (isset($_GET['code'])) {
 ?>
 
 <?php
-//redirect to reservationform.php if the user
+//redirect to omsim.php if the user
 //already logged in to the system
 if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
 ?>
     <script type="text/javascript">
-        window.location = "reservationform.php";
+        window.location = "omsim.php";
     </script>
 <?php
 }
@@ -74,12 +74,12 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
                 <h2>LOGIN</h2><br>
                 <table>
                     <tr>
-                        <td>Username:</td>
+                        <td>Email:</td>
 
                     </tr>
                     <tr>
 
-                        <td colspan="2"><input type="text" name="username" /></td>
+                        <td colspan="2"><input type="text" name="email" /></td>
                     </tr>
 
                     <tr>
@@ -136,27 +136,27 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
 
             <?php
             if (isset($_POST['login'])) {
-                $username = $_POST['username'];
+                $email = $_POST['email'];
                 $password = $_POST['password'];
 
-                if (!empty($username) && !empty($password)) {
-                    $q_login = $mysqli->query("SELECT uid, username, password FROM users_tbl WHERE username='$username' and password='$password'");
+                if (!empty($email) && !empty($password)) {
+                    $q_login = $mysqli->query("SELECT id, email, password FROM users WHERE email='$email' and password='$password'");
 
                     if (!$q_login) {
                         echo $mysqli->error;
                         exit();
                     } elseif ($q_login->num_rows == 0) {
-                        echo "Invalid Username or Password.";
+                        echo "Invalid Email or Password.";
                     } else {
                         $r_login = $q_login->fetch_assoc();
-                        //check the entered username and password
+                        //check the entered email and password
                         //is the same from the table users
-                        if ($r_login['username'] == $username and $r_login['password'] == $password) {
+                        if ($r_login['email'] == $email and $r_login['password'] == $password) {
                             $_SESSION['uid'] = $r_login['uid'];
                             $_SESSION['session_status'] = 1;
             ?>
                             <script type="text/javascript">
-                                window.location = "home.php";
+                                window.location = "test.php";
                             </script>
             <?php
                         }

@@ -9,7 +9,7 @@ if (session_status() === PHP_SESSION_NONE) {
 // Configuration (Use the ID from your previous screenshot)
 $clientID = '919921853456-6jrp4gsd96qva9a3n97v9dit2nl9oeae.apps.googleusercontent.com';
 $clientSecret = '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'; // Find this in your Google Console
-$redirectUri = 'http://localhost/IT5/login.php';
+$redirectUri = 'http://localhost/omsim-finals/login.php';
 
 // Initialize the Google Client
 $client = new \Google_Client();
@@ -19,7 +19,7 @@ $client->setRedirectUri($redirectUri);
 $client->addScope("email");
 $client->addScope("profile");
 
-// --- Keep your existing database connection code below ---
+// user log in
 $conn = mysqli_connect("localhost", "root", "", "it5_login");
 $host = "Localhost";
 $user = "root";
