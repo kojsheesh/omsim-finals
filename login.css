@@ -70,11 +70,13 @@ nav a {
   height: 400px;
   width: 400px;
   background-color: #f2f1ef9f;
-  padding: 18px;
+  padding: 29px;
   text-align: center;
+  margin-top: 29px;
   
 }
 .logpage-text table {
+    margin-top: 29px;
   margin-left: auto;
   margin-right: auto;
 }

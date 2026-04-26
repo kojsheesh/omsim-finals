@@ -47,6 +47,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Log in</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -76,7 +77,6 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
             <div class="pic">
             </div>
             <div class="logpage-text">
-                <h2>LOGIN</h2><br>
                <table>
                     <tr>
                         <td>Email:</td>
@@ -93,6 +93,8 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
                     <tr>
                         <td colspan="2">
                             <br><br>
+                            <div class="g-recaptcha" data-sitekey="6Le0DcssAAAAACPv1LdYyROfcxNimO0PaN-RXeiC"></div>
+<br>
                             <input type="submit" name="login" value="Log in" />
                         </td>
                     </tr>
@@ -100,9 +102,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
                         <td> <br>Don't have an account?</td>
                         <td> <br><a href="signup.php">Sign Up</a></td>
                     </tr>
-                    <tr>
-                        <td colspan="2"><p>------------------- or ----------------------</p></td>
-                    </tr>
+
                     <tr>
                         <td colspan="2">
                             <a href="<?php echo $client->createAuthUrl(); ?>" style="text-decoration:none;">
@@ -123,36 +123,47 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
 
 
             <?php
-            if (isset($_POST['login'])) {
-                $email = $_POST['email'];
-                $password = $_POST['password'];
+if (isset($_POST['login'])) {
+    $email = $mysqli->real_escape_string($_POST['email']);
+    $password = $mysqli->real_escape_string($_POST['password']);
 
-                if (!empty($email) && !empty($password)) {
-                    $q_login = $mysqli->query("SELECT id, email, password FROM users WHERE email='$email' and password='$password'");
+    // 1. Get the reCAPTCHA response from the form
+    $recaptcha_response = $_POST['g-recaptcha-response'];
+    
+    // 2. Prepare the verification request
+    $secret_key = '6Le0DcssAAAAAPs9yTX94AMR1gomfLiBN-H8lTLc'; // PASTE YOUR SECRET KEY HERE
+    $verify_url = "https://www.google.com/recaptcha/api/siteverify?secret=" . $secret_key . "&response=" . $recaptcha_response;
 
-                    if (!$q_login) {
-                        echo $mysqli->error;
-                        exit();
-                    } elseif ($q_login->num_rows == 0) {
-                       echo "<script>alert('Invalid Email or Password. Please try again.');</script>";
-                    } else {
-                        $r_login = $q_login->fetch_assoc();
-                        //check the entered email and password
-                        //is the same from the table users
-                        if ($r_login['email'] == $email and $r_login['password'] == $password) {
-                            $_SESSION['user_email'] = $r_login['email'];
-                            $_SESSION['id'] = $r_login['id'];
-                            $_SESSION['session_status'] = 1;
-            ?>
-                            <script type="text/javascript">
-                                window.location = "test.php";
-                            </script>
-            <?php
-                        }
-                    }
+    // 3. Send request to Google
+    $response = file_get_contents($verify_url);
+    $response_keys = json_decode($response, true);
+
+    if (!empty($email) && !empty($password)) {
+        // 4. Check if reCAPTCHA was successful
+        if (intval($response_keys["success"]) !== 1) {
+            echo "<script>alert('Please complete the reCAPTCHA to prove you are not a robot.');</script>";
+        } else {
+            // 5. Proceed with your login query
+            $q_login = $mysqli->query("SELECT id, email, password FROM users WHERE email='$email' AND password='$password'");
+
+            if (!$q_login) {
+                echo $mysqli->error;
+                exit();
+            } elseif ($q_login->num_rows == 0) {
+                echo "<script>alert('Invalid Email or Password. Please try again.');</script>";
+            } else {
+                $r_login = $q_login->fetch_assoc();
+                if ($r_login['email'] == $email && $r_login['password'] == $password) {
+                    $_SESSION['user_email'] = $r_login['email'];
+                    $_SESSION['id'] = $r_login['id'];
+                    $_SESSION['session_status'] = 1;
+                    echo "<script>window.location = 'test.php';</script>";
                 }
             }
-            ?>
+        }
+    }
+}
+?>
         </form>
     </div>
 </body>
