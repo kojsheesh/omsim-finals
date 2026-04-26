@@ -72,7 +72,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
         </nav>
     </header>
     <div class="logpage">
-        <form method="POST" action="">
+        <form method="POST" action="" autocomplete="off">
 
             <div class="pic">
             </div>

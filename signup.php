@@ -47,7 +47,7 @@ if (isset($_POST['signup'])) {
 </head>
 <body>
     <div class="logpage">
-        <form method="POST" action="">
+        <form method="POST" action="" autocomplete="off">
             <div class="pic"></div>
             <div class="logpage-text">
                 <h2>CREATE ACCOUNT</h2>
