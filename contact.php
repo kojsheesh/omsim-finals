@@ -65,7 +65,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="feedback-section">
-            <a href="feedback_form.php" class="feedback-btn">
+            <a href="feedback.php" class="feedback-btn">
                 [ Submit Feedback / Contact Form ]
             </a>
             <p>Click here to send us your thoughts or ask a question.</p>
