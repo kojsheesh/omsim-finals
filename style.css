@@ -142,84 +142,68 @@ header {
   height: 100vh;
   display: flex;
   align-items: center;
+  padding: 50px;
   justify-content: center;
-  padding: 20px; /* Reduced padding for mobile safety */
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-              url("Photos/body.jpg");
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("Photos/body.jpg");
+
   background-size: cover;
   background-position: center;
 }
 
-/* Added a wrapper for the form and image to stick together */
-form {
-  display: flex; /* This aligns .pic and .logpage-text side-by-side */
-  box-shadow: 0px 10px 30px rgba(0,0,0,0.5); /* Adds depth */
-  border-radius: 15px; /* Optional: rounds the outer corners */
-  overflow: hidden; /* Clips the child elements to the border radius */
-}
-
 .pic {
-  /* Remove float: left */
-  height: 500px; /* Increased height to fit reCAPTCHA better */
-  width: 250px;
+  float: left;
+  height: 400px;
+  width: 200px;
+  background-color: #000000;
+  padding: 18px;
   background-image: url(Photos/sikatan.jpg);
   background-size: cover;
   background-position: center;
 }
 
+
 .logpage-text {
-  /* Remove float: right */
-  height: 500px; /* Must match .pic height */
+  float: right;
+  height: 400px;
   width: 400px;
-  background-color: rgba(242, 241, 239, 0.9); /* More solid for readability */
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* Centers the form vertically */
+  background-color: #f2f1ef9f;
+  padding: 18px;
+  text-align: center;
+  
+}
+.logpage-text table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td {
   text-align: left;
 }
 
-.logpage-text h2 {
-  margin-top: 0;
-  letter-spacing: 2px;
-  font-weight: bold;
-}
-
-/* Inputs and Buttons */
 input[type="text"],
-input[type="email"],
 input[type="password"] {
-  background-color: transparent;
-  padding: 10px 5px;
-  width: 100%; /* Spans the table width */
+  background-color: #d1d1d100;
+  padding: 8px;
+  width: 250px;
   border: none;
-  border-bottom: 2px solid #222;
+  border-bottom: #222222 solid;
   outline: none;
-  margin-bottom: 10px;
 }
-
 input[type="submit"] {
-  background: linear-gradient(to right, #f39c12, #e67e22);
-  color: white;
-  padding: 12px;
-  width: 100%;
-  border: none;
-  border-radius: 25px; /* Pills shape looks more modern */
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.3s;
+  background: linear-gradient(rgba(0, 128, 0, 0.281), orange);
+  padding: 8px;
+  width: 250px;
+  border-radius: 10px;
 }
-
-input[type="submit"]:hover {
-  transform: scale(1.02);
-  filter: brightness(1.1);
+a {
+  text-decoration: none;
+  color: #000;
 }
-
-/* Center reCAPTCHA */
-.g-recaptcha {
-  display: flex;
-  justify-content: center;
-  margin: 15px 0;
+a:hover {
+  color: #d1d1d1;
 }
 /* about */
 body {

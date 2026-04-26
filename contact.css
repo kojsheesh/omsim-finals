@@ -33,9 +33,6 @@ header {
     padding: 10px 5%;
     width: 100%;
     box-sizing: border-box;
-    position: sticky;
-    top: 0;
-    z-index: 999;
 }
 
 .logo img {

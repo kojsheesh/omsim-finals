@@ -5,9 +5,9 @@ session_start(); // THIS MUST BE AT THE TOP
 <?php
 // Best Seller Product Data
 $bestSellers = [
-    ["name" => "Sikatan Special Coffee", "price" => 120.00, "badge" => "🔥 Top Pick", "img" => "https://unsplash.com"],
-    ["name" => "Iced Matcha Latte", "price" => 95.00, "badge" => "⭐ Best Rated", "img" => "https://unsplash.com"],
-    ["name" => "Sikada Club Sandwich", "price" => 180.00, "badge" => "💥 Hot Deal", "img" => "https://unsplash.com"],
+    ["name" => "Halo-Halo", "price" => 189.00, "badge" => "🔥 Top Pick", "img" => "https://cdn.discordapp.com/attachments/1312440437679591427/1497940548802314260/image.png?ex=69ef5959&is=69ee07d9&hm=5346cc6c711aaa82e412a264aeea436a6216d686a99105b26ce00f48f43263f4&"],
+    ["name" => "Sinigang na Ribs", "price" => 450.00, "badge" => "⭐ Best Rated", "img" => "https://cdn.discordapp.com/attachments/1312440437679591427/1497942037167866049/image.png?ex=69ef5abc&is=69ee093c&hm=fc5c8b506a7e83f8e93b2168f5f0f6e680f26b396f74952f311063042cf7927d&"],
+    ["name" => "Matcha Latte", "price" => 159.00, "badge" => "💥 Hot Deal", "img" => "https://cdn.discordapp.com/attachments/1312440437679591427/1497943210968875109/image.png?ex=69ef5bd3&is=69ee0a53&hm=373790ddcc44eb7135e42b798d5fb995379a7ad24eb7daa0d9dc1693a8e1129a&"],
 ];
 ?>
 <!DOCTYPE html>
@@ -172,7 +172,7 @@ $bestSellers = [
                     <div class="carousel-slide">
                         <img src="<?= $item['img'] ?>" alt="">
                         <div class="item-info">
-                            <span style="color: #ffcc00; font-size: 0.7rem; font-weight: bold;"><?= $item['badge'] ?></span>
+                            <span style="color: #ffcc00; font-size: 0.9rem; font-weight: bold;"><?= $item['badge'] ?></span>
                             <h2 style="color: white; margin: 5px 0; font-size: 1.8rem;"><?= $item['name'] ?></h2>
                             <p style="color: #ffcc00; font-weight: bold; font-size: 1.6rem; margin:0;">₱<?= number_format($item['price'], 2) ?></p>
                         </div>
@@ -189,8 +189,8 @@ $bestSellers = [
             <h1>Sikatan Sikada Cafe</h1> 
             <p>Tuloy po kayo! Enjoy delicious food in a relaxing place.</p>
             <div class="buttons">
-                <button class="btn">Explore Menu</button>
-                <button class="btn-outline">Learn More</button>
+                <a href="menu.php" class="btn">Explore Menu</a>
+    <a href="about.php" class="btn-outline">Learn More</a>
             </div>
         </div>
     </div>
