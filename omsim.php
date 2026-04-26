@@ -8,7 +8,10 @@ if (!isset($_SESSION['user_email'])) {
     header("Location: login.php");
     exit();
 }
+
+
 ?>
+
 
 
 <!DOCTYPE html>
@@ -45,7 +48,12 @@ if (!isset($_SESSION['user_email'])) {
             </div>
 
             <div class="field"><label>Number of Packs (Guests)</label><input type="number" name="num" min="1" required></div>
-
+            <div class="field">
+                <label>Reserved Item</label>
+                <input type="text" name="reserved_item"
+                    value="<?php echo isset($_GET['item']) ? htmlspecialchars($_GET['item']) : ''; ?>"
+                    readonly>
+            </div>
             <button type="submit">Confirm Reservation</button>
             <button type="reset">Clear Form</button>
 

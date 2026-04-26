@@ -15,6 +15,7 @@ $result = mysqli_query($conn, "SELECT * FROM testtbl");
         <th>Time</th>
         <th>Event Type</th>
         <th>Packs</th>
+        <th>Reserved Item</th>
     </tr>
 
     <?php
@@ -29,6 +30,7 @@ $result = mysqli_query($conn, "SELECT * FROM testtbl");
         <td><?php echo $row['Time of Reservation']; ?></td>
         <td><?php echo $row['Event Type']; ?></td>
         <td><?php echo $row['Number of Packs']; ?></td>
+        <td><?php echo $row['Reserved Item']; ?></td>
     </tr>
     <?php 
     } ?>

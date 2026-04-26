@@ -60,3 +60,50 @@ p {
 .btn:hover {
     background-color: #2e59d9;
 }
+
+/* --- EYE CATCHER WELCOME TEXT --- */
+.welcome-outer-div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
+    z-index: 5;
+    margin-top: 20px; /* Added spacing */
+}
+
+.hero-text {
+    text-align: left;
+    max-width: 800px;
+    color: white;
+    /* REMOVED: transform: scale(0.8); - This prevented responsiveness */
+    animation: slideIn 1s ease-out forwards;
+}
+
+.hero-text h1 {
+    /* Fluid font size: scales between 2.5rem and 5rem */
+    font-size: clamp(2.5rem, 8vw, 5rem); 
+    line-height: 1;
+    margin: 15px 0;
+    color: #fff;
+    /* REMOVED: white-space: nowrap; - This caused text to overflow */
+    font-weight: 900;
+    text-shadow: 2px 4px 20px rgba(0,0,0,0.5);
+}
+
+/* RESPONSIVE BREAKPOINT FOR TABLETS/MOBILES */
+@media (max-width: 768px) {
+    .welcome-outer-div {
+        justify-content: center; /* Center on smaller screens */
+        padding-left: 0;
+        text-align: center;
+    }
+    .hero-text {
+        padding: 0 20px;
+    }
+    .hero-text h3 {
+        letter-spacing: 3px;
+    }
+    .buttons {
+        justify-content: center; /* Center buttons on mobile */
+    }
+}

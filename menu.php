@@ -1,3 +1,6 @@
+<?php
+session_start(); // THIS MUST BE AT THE TOP
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,7 +25,12 @@
       <a href="about.php">About</a>
       <a href="menu.php">Menu</a>
       <a href="contact.php">Contact</a>
-      <a href="omsim.php">Reserve Now</a>
+      <?php if (isset($_SESSION['user_email'])): ?>
+        <a href="omsim.php">Reserve Now</a>
+        <a href="logout.php">Logout</a>
+      <?php else: ?>
+        <a href=" login.php">Login</a>
+      <?php endif; ?>
     </nav>
   </header>
 
@@ -37,7 +45,7 @@
             <p>
               Immerse your group in the true spirit of Sikatan Sikada Café at this signature common table. Directly overlooked by our vibrant, handcrafted yellow sun mural—the symbol of the café's soul and name—this spot blends our favorite industrial-rustic aesthetic with the warmth of shared experiences.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="omsim.php?item=Common%20Table" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -48,7 +56,7 @@
             <p>
               Elevate your group gathering at our premier 8-seater long table, designed specifically for those who believe that great food is best enjoyed with even better company. Situated in the heart of our breezy, open-air deck, this spot offers the ultimate "overlooking" experience that has made Sikatan Sikada a destination in Binangonan.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="omsim.php?item=Panorama%20Group%20Deck" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -59,7 +67,7 @@
             <p>
               Designed for the ultimate group hangout, our Corner Horizon table offers a unique vantage point of the Binangonan hills. Positioned at the edge of our glass-paneled deck, this expansive table allows your group to feel fully immersed in the landscape, providing a panoramic view that stretches from the lush valley to the distant lake.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="omsim.php?item=Panorama%20Group%20Deck%202" class="btn">Reserve</a>
           </div>
         </div>
       </div>
@@ -68,48 +76,121 @@
     <div class="containercateg">
       <div class="det-grid">
         <div class="det">
-          <img src="Photos\dummy_photo.jpg" />
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471819249225769/IMG_20260425_133014_415.jpg?ex=69eef64f&is=69eda4cf&hm=d792add9f8296fabf808ef6005e8ac1d9cf7e8a9a4b9865a129b17e8291da004&=&format=webp&width=527&height=703" />
           <div class="content">
-            <h3>Food Combo 1</h3>
+            <h3>Garden View Nook (4 Seater)</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Perfect for small families or a double date. This intimate 4-seater spot offers a more private experience while still enjoying the fresh air and rustic charm of our garden-side seating.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="omsim.php?item=Garden%20View%20Nook" class="btn">Reserve</a>
           </div>
         </div>
 
         <div class="det">
-          <img src="Photos\dummy_photo.jpg" />
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471820243144814/IMG_20260425_133051_925.jpg?ex=69eef64f&is=69eda4cf&hm=48fc7c3253a10b40a9e60a6cd89b7527933414c15cdf41e5c1107f7609069a7f&=&format=webp&width=527&height=703" />
           <div class="content">
-            <h3>Food Combo 2</h3>
+            <h3>Garden Patio Table (6 Seater)</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Enjoy a balanced outdoor dining experience with our 6-seater patio table. Perfect for family lunches or catching up with friends, this table provides a spacious yet cozy atmosphere under the shade, surrounded by our café's natural greenery.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="omsim.php?item=Garden%20Patio%20Table" class="btn">Reserve</a>
           </div>
         </div>
 
         <div class="det">
-          <img src="Photos\dummy_photo.jpg" />
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471821463949392/IMG_20260425_133247_781.jpg?ex=69eef64f&is=69eda4cf&hm=f7a53037c6e83c018a7a60fae5c7d0c5438fbc1f6ed2b2964045fb796f920243&=&format=webp&width=527&height=703" />
           <div class="content">
-            <h3>Food Combo 3</h3>
+            <h3>Grand Gathering Table (8 Seater)</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Our most spacious option for the ultimate Sikatan Sikada experience. Perfect for birthday celebrations, reunions, or large family dinners. This long table ensures everyone has a seat at the heart of the conversation while enjoying the café's refreshing breeze.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="omsim.php?item=Grand%20Gathering%20Table" class="btn">Reserve</a>
           </div>
         </div>
       </div>
     </div>
+
+
+
+
+
+    <div class="containercateg">
+      <div class="det-grid">
+        <div class="det">
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472519924613150/IMG_20260425_133845_800.jpg?ex=69eef6f6&is=69eda576&hm=e21e7d3adf463ef9ae9ddc0b6d3f3388b9bd9ce512483a766c5c1278991bc503&=&format=webp&width=527&height=703" />
+          <div class="content">
+            <h3>Classic Heritage Table (4 Seater)</h3>
+            <p>
+              Our Classic Heritage Table offers a timeless and sturdy design, ideal for guests who appreciate a traditional dining atmosphere. Positioned in a quiet, accessible area of the café, it provides the perfect comfort for long conversations and relaxing meals.
+            </p>
+            <a href="omsim.php?item=Classic%20Heritage%20Table" class="btn">Reserve</a>
+          </div>
+        </div>
+
+        <div class="det">
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472520851427359/IMG_20260425_134028_049.jpg?ex=69eef6f6&is=69eda576&hm=6ebebc5fdf6c39a6ab5755f06a5a882a44056b45c51d4f573dae84d166ab2657&=&format=webp&width=527&height=703" />
+          <div class="content">
+            <h3>Flexible Horizon Table (6-8 Seater)</h3>
+            <p>
+              Our most versatile seating option. This classic wooden 6-seater can be comfortably expanded to accommodate up to 8 guests. Located in a breezy spot with a great view, it’s perfect for groups that might have a few extra friends joining last minute.
+            </p>
+            <a href="omsim.php?item=Flexible%20Horizon%20Table&min=6&max=8" class="btn">Reserve</a>
+          </div>
+        </div>
+
+        <div class="det">
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497473180145549312/IMG_20260425_134330_429.jpg?ex=69eef793&is=69eda613&hm=a2f92edbc7bbf9610679f5b6542c340df798bcb05550be18a2fdaec6ff383357&=&format=webp&width=527&height=703" />
+          <div class="content">
+            <h3>Sunset Terrace (4 Seater)</h3>
+            <p>
+              Located in our most popular open-air section, the Sunset Terrace features a row of 4-seater tables designed for those who love the "overlooking" vibe. Enjoy the refreshing Binangonan breeze and a panoramic view while you dine in this vibrant, airy space.
+            </p>
+            <a href="omsim.php?item=Sunset%20Terrace%204-Seater" class="btn">Reserve</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="containercateg">
+      <div class="det-grid">
+       <div class="det">
+  <img src="https://media.discordapp.net/attachments/1496377481652076586/1497473179403288626/IMG_20260425_134312_108.jpg?ex=69eef793&is=69eda613&hm=d84b60c732ce0d39c3aeeefea89bcf8309c08d6cbe1634be89e359452a8cbc37&=&format=webp&width=527&height=703" />
+  <div class="content">
+    <h3>Overlook Date Nook (2 Seater)</h3>
+    <p>
+      Our most intimate seating option, designed specifically for couples. This 2-seater nook provides a private, cozy corner with an unobstructed view of the horizon. Whether it's a first date or an anniversary, this spot offers the quiet charm and romantic atmosphere you’re looking for.
+    </p>
+    <a href="omsim.php?item=Overlook%20Date%20Nook" class="btn">Reserve</a>
+  </div>
+</div>
+
+       <div class="det">
+  <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472996451942490/IMG_20260425_134242_470.jpg?ex=69eef768&is=69eda5e8&hm=eea141ea17cdc74b5f7c77a9beb0172b38370ccb2814765986133c74dcddd748&=&format=webp&width=527&height=703" />
+  <div class="content">
+    <h3>Bistro Breeze Deck (2-4 Seater)</h3>
+    <p>
+      Our most flexible outdoor seating! These bistro-style tables are perfect for a quick solo coffee, a cozy date for two, or can be combined for a group of four. Located right on the deck, it’s the best spot to feel the wind and soak in the casual café atmosphere.
+    </p>
+    <a href="omsim.php?item=Bistro%20Breeze%20Deck&min=2&max=4" class="btn">Reserve</a>
+  </div>
+</div>
+
+       <div class="det">
+  <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471820830343238/IMG_20260425_133222_236.jpg?ex=69eef64f&is=69eda4cf&hm=63d2d3961944139d9ffada5702376f43c1ecdcc317ebc45f197954daa7522339&=&format=webp&width=527&height=703" />
+  <div class="content">
+    <h3>Grand Indoor Suite (8-12 Seater)</h3>
+    <p>
+      Our largest indoor seating option, perfect for big families, barkada reunions, or corporate meetings. This expansive long table offers a comfortable, air-cooled environment while keeping everyone together in one vibrant space. 
+    </p>
+    <a href="omsim.php?item=Grand%20Indoor%20Suite&min=8&max=12" class="btn">Reserve</a>
+  </div>
+</div>
+      </div>
+    </div>
+
+
+
 
     <div class="containercateg">
       <h1>Reservations you might like</h1>

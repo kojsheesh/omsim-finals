@@ -1,3 +1,6 @@
+<?php
+session_start(); // THIS MUST BE AT THE TOP
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +26,12 @@
             <a href="about.php">About</a>
             <a href="menu.php">Menu</a>
             <a href="contact.php">Contact</a>
-            <a href="omsim.php">Reserve Now</a>
+            <?php if (isset($_SESSION['user_email'])): ?>
+                <a href="omsim.php">Reserve Now</a>
+                <a href="logout.php">Logout</a>
+            <?php else: ?>
+                <a href="login.php">Login</a>
+            <?php endif; ?>
         </nav>
         
     </header>
