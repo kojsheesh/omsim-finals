@@ -59,7 +59,7 @@ $bestSellers = [
             z-index: 5;
         }
         .hero-text {
-            text-align: left !important;
+            text-align: left;
             max-width: 1000px; 
             transform: scale(0.8); 
             transform-origin: left bottom;
@@ -78,7 +78,7 @@ $bestSellers = [
         }
 
         .hero-text h1 { 
-            font-size: 3rem !important; /* Larger for eye-catch effect */
+            font-size: 5rem; /* Larger for eye-catch effect */
             line-height: 1; 
             margin: 15px 0; 
             color: #fff; 
