@@ -70,7 +70,6 @@ $bestSellers = [
             color: white;
             animation: slideIn 1s ease-out forwards;
         }
-
         .hero-text h3 { 
             color: #ffcc00; 
             text-transform: uppercase; 
@@ -80,7 +79,6 @@ $bestSellers = [
             font-weight: 600;
             text-shadow: 0 0 10px rgba(255, 204, 0, 0.4);
         }
-
         .hero-text h1 { 
             font-size: 5rem;
             line-height: 1; 
@@ -90,7 +88,6 @@ $bestSellers = [
             font-weight: 900;
             text-shadow: 2px 4px 20px rgba(0,0,0,0.5);
         }
-
         .hero-text p { 
             color: #fff; 
             opacity: 0.9; 
@@ -102,7 +99,6 @@ $bestSellers = [
 
         /* --- MODERN BUTTONS --- */
         .buttons { display: flex; gap: 20px; }
-        
         .btn { 
             background: #ffcc00; 
             border: none; 
@@ -116,7 +112,6 @@ $bestSellers = [
             transition: 0.3s;
             box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
         }
-
         .btn-outline { 
             border: 2px solid #fff; 
             background: rgba(255, 255, 255, 0.1); 
@@ -130,7 +125,6 @@ $bestSellers = [
             text-transform: uppercase;
             transition: 0.3s;
         }
-
         .btn:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(255, 204, 0, 0.5); }
         .btn-outline:hover { background: #fff; color: #000; }
 
@@ -160,7 +154,6 @@ $bestSellers = [
             box-shadow: 0 4px 16px rgba(0,0,0,0.35);
         }
         .faq-fab:hover { transform: scale(1.08); }
-
         .faq-panel {
             position: fixed;
             bottom: 94px;
@@ -231,9 +224,36 @@ $bestSellers = [
             font-size: 11.5px;
             color: rgba(255,255,255,0.3);
         }
+
+        /* ===================== */
+        /* EXPIRED NOTICE        */
+        /* ===================== */
+        .expired-notice {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #1a1a1a;
+            border: 1px solid rgba(255,204,0,0.4);
+            color: #ffcc00;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+            z-index: 99999;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+            transition: opacity 0.5s;
+        }
     </style>
 </head>
 <body>
+
+<!-- SESSION EXPIRED NOTICE -->
+<?php if (isset($_GET['expired'])): ?>
+    <div class="expired-notice" id="expiredNotice">
+        ⚠️ Your session has expired. Please log in again.
+    </div>
+<?php endif; ?>
 
 <header>
     <div class="logo">
@@ -291,98 +311,6 @@ $bestSellers = [
 <!-- ===================== -->
 <!-- FAQ FLOATING WIDGET   -->
 <!-- ===================== -->
-<style>
-    .faq-fab {
-        position: fixed;
-        bottom: 28px;
-        right: 28px;
-        width: 54px;
-        height: 54px;
-        border-radius: 50%;
-        background: #ffcc00;
-        border: none;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-        transition: transform 0.2s, box-shadow 0.2s;
-        box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-    }
-    .faq-fab:hover { transform: scale(1.08); }
-
-    .faq-panel {
-        position: fixed;
-        bottom: 94px;
-        right: 28px;
-        width: 340px;
-        max-height: 480px;
-        background: #1a1a1a;
-        border-radius: 16px;
-        border: 1px solid rgba(255,204,0,0.25);
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        z-index: 9998;
-        opacity: 0;
-        transform: translateY(16px) scale(0.97);
-        pointer-events: none;
-        transition: opacity 0.25s, transform 0.25s;
-    }
-    .faq-panel.faq-open {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-        pointer-events: all;
-    }
-    .faq-header {
-        padding: 16px 20px 12px;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
-        background: rgba(255,204,0,0.07);
-    }
-    .faq-header h2 { margin: 0 0 2px; font-size: 15px; font-weight: 600; color: #ffcc00; }
-    .faq-header p { margin: 0; font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.4; }
-    .faq-list { overflow-y: auto; flex: 1; padding: 10px 0; }
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-question {
-        width: 100%;
-        background: none;
-        border: none;
-        padding: 13px 20px;
-        text-align: left;
-        color: #fff;
-        font-size: 13px;
-        font-weight: 500;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 12px;
-        transition: background 0.15s;
-    }
-    .faq-question:hover { background: rgba(255,204,0,0.06); }
-    .faq-question.faq-active { color: #ffcc00; }
-    .faq-chevron { flex-shrink: 0; width: 16px; height: 16px; transition: transform 0.25s; opacity: 0.5; }
-    .faq-question.faq-active .faq-chevron { transform: rotate(180deg); opacity: 1; }
-    .faq-answer {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease, padding 0.2s;
-        padding: 0 20px;
-        font-size: 12.5px;
-        color: rgba(255,255,255,0.6);
-        line-height: 1.6;
-    }
-    .faq-answer.faq-ans-open { max-height: 200px; padding: 0 20px 14px; }
-    .faq-footer {
-        padding: 12px 20px;
-        border-top: 1px solid rgba(255,255,255,0.08);
-        text-align: center;
-        font-size: 11.5px;
-        color: rgba(255,255,255,0.3);
-    }
-</style>
-
 <button class="faq-fab" id="faqBtn" aria-label="Open FAQ">
     <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"/>
@@ -401,6 +329,17 @@ $bestSellers = [
 </div>
 
 <script>
+    /* --- Carousel --- */
+    let index = 0;
+    const track = document.getElementById('track');
+    function moveSlide(d) {
+        const slides = document.querySelectorAll('.carousel-slide');
+        index = (index + d + slides.length) % slides.length;
+        track.style.transform = `translateX(-${index * 100}%)`;
+    }
+    setInterval(() => moveSlide(1), 6000);
+
+    /* --- FAQ Widget --- */
     const faqs = [
         { q: "What are your operating hours?", a: "We are open every day from 6:00 AM to 1:00 AM, so whether you're an early riser or a late-night diner, we've got you covered!" },
         { q: "Do you offer dine-in and takeout?", a: "We currently offer dine-in only. Come visit us and enjoy your meal in the relaxing ambiance of Sikatan Sikada Cafe!" },
@@ -447,6 +386,15 @@ $bestSellers = [
             ? `<svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
             : `<svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
     });
+
+    /* --- Auto-hide expired notice after 4 seconds --- */
+    const expiredNotice = document.getElementById('expiredNotice');
+    if (expiredNotice) {
+        setTimeout(() => {
+            expiredNotice.style.opacity = '0';
+            setTimeout(() => expiredNotice.remove(), 500);
+        }, 4000);
+    }
 </script>
 
 </body>

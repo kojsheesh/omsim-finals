@@ -5,6 +5,21 @@ require_once 'vendor/autoload.php';
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+// Auto Termination
+$timeout = 5; // 5 secs (change to your liking)
+
+if (isset($_SESSION['last_activity'])) {
+    $elapsed = time() - $_SESSION['last_activity'];
+
+    if ($elapsed > $timeout) {
+        session_unset();
+        session_destroy();
+        header("Location: index.php?expired=1");
+        exit();
+    }
+}
+
+$_SESSION['last_activity'] = time();
 
 // Configuration (Use the ID from your previous screenshot)
 $clientID = '919921853456-6jrp4gsd96qva9a3n97v9dit2nl9oeae.apps.googleusercontent.com';
