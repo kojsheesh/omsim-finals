@@ -54,7 +54,7 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
     <header>
         <div class="logo">
             <img
-                src="https://media.discordapp.net/attachments/1496377481652076586/1497614928008450158/logo.jpg?ex=69ee2a17&is=69ecd897&hm=aaa80ee66571838b6d3b92bef5219aed8a871dac8bec03f94f49e1de8b497ab6&=&format=webp&width=703&height=703"
+                src="logo.jpg"
                 alt="Logo" />
         </div>
 
