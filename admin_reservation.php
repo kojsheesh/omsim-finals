@@ -29,7 +29,7 @@
             </div>
 
             <?php
-            include "connection.php"; 
+            include "reservedb.php"; 
 
             $search = "";
             if (isset($_GET['search']) && !empty($_GET['search'])) {
@@ -83,7 +83,7 @@
                                 <td><span class="badge"><?php echo htmlspecialchars($row['Event Type']); ?></span></td>
                                 <td><?php echo htmlspecialchars($row['Number of Packs']); ?></td>
                                 <td>
-                                    <a href="delete.php?email=<?php echo urlencode($row['Email Address']); ?>" 
+                                    <a href="delete_reservation.php?email=<?php echo urlencode($row['Email Address']); ?>" 
                                        class="btn-delete"
                                        onclick="return confirm('Are you sure you want to delete this reservation?')">
                                        <i class="fa-solid fa-trash"></i>

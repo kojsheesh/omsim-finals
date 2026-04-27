@@ -1,7 +1,7 @@
 
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "testing");
+$conn = mysqli_connect("localhost", "root", "", "it5_reservations");
 
 if(!$conn)
 {

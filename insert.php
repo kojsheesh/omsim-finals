@@ -11,7 +11,7 @@ $event   = $_POST['event'];
 $num     = $_POST['num'];
 
 // SQL Query using the exact column names from your screenshot
-$sql = "INSERT INTO testtbl (`Email Address`, `Full Name`, `Contact Number`, `Date of Reservation`, `Time of Reservation`, `Event Type`, `Number of Packs`) 
+$sql = "INSERT INTO reservation (`Email Address`, `Full Name`, `Contact Number`, `Date of Reservation`, `Time of Reservation`, `Event Type`, `Number of Packs`) 
         VALUES ('$email', '$name', '$number', '$date', '$time', '$event', '$num')";
 
 if (mysqli_query($conn, $sql)) {

@@ -33,7 +33,7 @@ if (!isset($_SESSION['user_email'])) {
         <form action="insert.php" method="POST">
             <div class="field"><label>Email Address</label><input type="email" name="email" required placeholder="example@mail.com"></div>
             <div class="field"><label>Full Name</label><input type="text" name="name" required placeholder="Enter your full name"></div>
-
+            <div class="field"><label>Contact Number</label><input type="text" name="number" required placeholder="Enter your Contact Number"></div>
             <div class="field" style="width: 48%;"><label>Date</label><input type="date" name="date" required></div>
             <div class="field" style="width: 48%;"><label>Time</label><input type="time" name="time" required></div>
 
@@ -48,12 +48,6 @@ if (!isset($_SESSION['user_email'])) {
             </div>
 
             <div class="field"><label>Number of Packs (Guests)</label><input type="number" name="num" min="1" required></div>
-            <div class="field">
-                <label>Reserved Item</label>
-                <input type="text" name="reserved_item"
-                    value="<?php echo isset($_GET['item']) ? htmlspecialchars($_GET['item']) : ''; ?>"
-                    readonly>
-            </div>
             <button type="submit">Confirm Reservation</button>
             <button type="reset">Clear Form</button>
 
