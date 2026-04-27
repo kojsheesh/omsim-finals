@@ -43,7 +43,7 @@
         </div>
 
         <div class="contact-cards-container">
-            <a href="https://www.facebook.com/profile.php?id=100072264930559&sk=about" class="contact-card" target="_blank">
+            <a href="https://www.facebook.com/profile.php?id=100072264930559" class="contact-card" target="_blank">
                 <div class="icon-circle"><i class="fab fa-facebook-f"></i></div>
                 <h3>Facebook</h3>
                 <span class="fb-link-text">[Visit Page]</span>
