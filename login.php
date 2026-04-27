@@ -17,9 +17,9 @@ if (isset($_GET['code'])) {
     $checkUser = $mysqli->query("SELECT * FROM users WHERE email = '$email'");
 
     if ($checkUser->num_rows == 0) {
-        // Insert new user if they don't exist
-        $mysqli->query("INSERT INTO users (name, email) VALUES ('$name', '$email')");
-    }
+    // Insert new user if they don't exist
+    $mysqli->query("INSERT INTO users (name, email, password) VALUES ('$name', '$email', '')");
+}
 
     $_SESSION['user_email'] = $email;
     header("Location: test.php");
