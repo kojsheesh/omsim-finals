@@ -2,15 +2,62 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
+include "reservedb.php"; // This provides $conn
 
-// THE GUARD: If not logged in, kick them out to login.php
+// THE GUARD
 if (!isset($_SESSION['user_email'])) {
     header("Location: login.php");
     exit();
 }
 
+/** * FIX 1: The Session Key
+ * If 'Full Name' is giving an error, it means you didn't save the name 
+ * under that key in login.php. Using 'Customer' as a fallback for now.
+ */
+$full_name = $_SESSION['Full Name'] ?? 'Customer'; 
 
+/** * FIX 2: The SQL Column Names
+ * Based on your previous screenshot, the column is 'price', not 'total_price'.
+ */
+// 2. The Final Corrected Query
+$query = "SELECT 
+            SUM(oi.quantity) AS total_items, 
+            SUM(oi.price) AS total_spent, 
+            COUNT(DISTINCT oi.food_name) AS unique_items 
+          FROM reservation r 
+          JOIN order_items oi ON r.id = oi.reservation_id 
+          WHERE r.`Full Name` = '$full_name'";
+
+$result = mysqli_query($conn, $query);
+
+// Safely handle the result
+if ($result && mysqli_num_rows($result) > 0) {
+    $row = mysqli_fetch_assoc($result);
+} else {
+    $row = ['total_items' => 0, 'total_spent' => 0, 'unique_items' => 0];
+}
+
+// 3. Send the summarized data to your Python Terminal
+$data = [
+    "total_items"  => (int)($row['total_items'] ?? 0),
+    "total_spent"  => (float)($row['total_spent'] ?? 0),
+    "unique_items" => (int)($row['unique_items'] ?? 0)
+];
+
+// 4. The "Bridge" to Python
+$ch = curl_init('http://127.0.0.1:5000/predict');
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type:application/json']);
+
+$response = curl_exec($ch);
+$prediction = json_decode($response, true);
+
+// 5. The Output
+$recommended_items = $prediction['recommendations'] ?? ["Halo-Halo", "Pork Sisig"]; 
 ?>
+
+
 
 
 
@@ -232,6 +279,13 @@ if (!isset($_SESSION['user_email'])) {
   </button>
 </header>
  
+<!--for product recommendation-->
+<div id="ai-recommendations-wrapper" style="max-width: 1200px; margin: 20px auto; padding: 0 2rem;">
+    <div id="ai-recommendations-list" style="display: flex; gap: 15px; flex-wrap: wrap; justify-content: center;">
+        </div>
+</div>
+
+
 <!-- HERO -->
 <section class="hero">
   <p class="hero-label">Solid Ka Dito</p>
@@ -473,7 +527,10 @@ const soloItems = [
   { id:406, sub:"Solo · w/ Garlic Fried Rice", name:"Adobong Itik w/ Egg",           price:249, emoji:"🦆", desc:"Garlic Fried Rice + Adobong Itik + Egg." },
   { id:407, sub:"Solo · w/ Garlic Fried Rice", name:"Fried Bangus w/ Egg Plant & Egg",price:249,emoji:"🐠", desc:"Garlic Fried Rice + Fried Bangus + Eggplant + Egg." },
   { id:408, sub:"Solo · w/ Garlic Fried Rice", name:"Boneless Chicken w/ Egg",       price:249, emoji:"🍗", desc:"Garlic Fried Rice + Boneless Chicken + Egg." },
+
 ];
+
+
  
 // ══════════════════════════════════════════════════════════
 //  CART
@@ -746,6 +803,53 @@ function handleCheckout() {
  
 // INIT
 renderContent();
+
+// ══════════════════════════════════════════════════════════
+//  AI RECOMMENDATION ENGINE
+// ══════════════════════════════════════════════════════════
+(function() {
+    // 1. Get the list of names sent from the Python API via PHP
+    const recommendedNames = <?php echo json_encode($recommended_items); ?>;
+    
+    // 2. Create a master list of all items to search through
+    const allMenuData = [...bundleExtraItems, ...kasaloItems, ...meryendaItems, ...uhawItems, ...soloItems];
+
+    // 3. Find the full details (price, emoji, desc) for the recommended names
+    const finalRecommendations = allMenuData.filter(item => 
+        recommendedNames.includes(item.name)
+    );
+
+    const recContainer = document.getElementById('ai-recommendations-list');
+    const recWrapper = document.getElementById('ai-recommendations-wrapper');
+    
+    if (finalRecommendations.length > 0) {
+        let html = `<div style="width:100%; border-bottom: 2px solid var(--accent); margin-bottom: 15px;">
+                        <h2 style="font-family:'Cormorant Garamond',serif; color:var(--accent);">✨ Suggested for You, <?php echo htmlspecialchars($full_name); ?></h2>
+                    </div>`;
+        
+        finalRecommendations.forEach(item => {
+            html += `
+                <div class="card" style="width: 250px; animation: fadeUp 0.5s ease both;">
+                    <div class="card-top">${item.emoji}</div>
+                    <div class="card-body">
+                        <div class="card-name">${item.name}</div>
+                        <div class="card-desc">${item.desc}</div>
+                        <div class="card-foot">
+                            <span class="price">₱${item.price.toFixed(2)}</span>
+                            <button class="add-btn" onclick="addToCart(${item.id},'${item.name.replace(/'/g,"\\'")}',${item.price},'${item.emoji}')">
+                                + Add
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `;
+        });
+        recContainer.innerHTML = html;
+    } else {
+        // Hide the section if no recommendations are found
+        recWrapper.style.display = 'none';
+    }
+})();
 </script>
 </body>
 </html>
