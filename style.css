@@ -14,7 +14,7 @@
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
+    url("background.jpg");
 
   background-size: cover;
   background-position: center;
@@ -147,7 +147,7 @@ header {
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("Photos/body.jpg");
+    url("background.jpg");
 
   background-size: cover;
   background-position: center;
@@ -159,7 +159,7 @@ header {
   width: 200px;
   background-color: #000000;
   padding: 18px;
-  background-image: url(Photos/sikatan.jpg);
+  background-image: url(background.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -212,7 +212,7 @@ body {
     min-height: 100vh;
     background:
     
-      url("Photos/body.jpg") no-repeat center center fixed;
+      url("background.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -296,7 +296,7 @@ body {
     /* This link is a high-quality nature photo from Unsplash */
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
+    url("background.jpg");
 
     /* The Centering Fix */
     background-position: center center;

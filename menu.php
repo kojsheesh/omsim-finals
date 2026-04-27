@@ -16,7 +16,7 @@ session_start(); // THIS MUST BE AT THE TOP
     <div class="logo">
 
       <img
-        img src='https://media.discordapp.net/attachments/1496377481652076586/1497614928008450158/logo.jpg?ex=69ee2a17&is=69ecd897&hm=aaa80ee66571838b6d3b92bef5219aed8a871dac8bec03f94f49e1de8b497ab6&=&format=webp&width=703&height=703'
+        img src='logo.jpg'
         alt="Logo" />
     </div>
 
@@ -39,7 +39,7 @@ session_start(); // THIS MUST BE AT THE TOP
       <h1>Tables and Atmosphere</h1>
       <div class="det-grid">
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472520398438480/IMG_20260425_133938_952.jpg?ex=69f04876&is=69eef6f6&hm=9e22688d6cce0f36225aa7ecccb378c6e29482fd7c7c5f6f98f18253df8163fc&=&format=webp&width=1203&height=902" />
+          <img src="event place.jpg" />
           <div class="content">
             <h3>Event Table (Seats 5 to 6)</h3>
             <p>
@@ -50,7 +50,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1498266985166016653/image.png?ex=69f0895d&is=69ef37dd&hm=652444f82c08f6aaf78436f32bce148d71c1d47b5dacf5590b3726d633e56d4c&=&format=webp&quality=lossless&width=424&height=350" />
+          <img src="6-8.png" />
           <div class="content">
             <h3>Event Place (6 to 8 Seater)</h3>
             <p>
@@ -61,7 +61,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://images-ext-1.discordapp.net/external/1KGMAo58uhu7fQHlCa2n3o2uiz6FNOO0JfdwP2ohEcU/%3Fstp%3Dcp6_dst-jpg_tt6%26_nc_cat%3D109%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeGrNUiqdtioAg1WQs2bz41hggvZtifZU2uCC9m2J9lTa4zpn-xWKJv1q4rBuuEjVW0ExBBip0pJLCrol8qvPilv%26_nc_ohc%3D8yhmpzyb2qsQ7kNvwGSXJkk%26_nc_oc%3DAdou3Shu5gzO_lWj5MFZDxiR61mMqVZ9MTeeRpnTEGbizbMcxk2MXtQ0pYzMNGQpz-0%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl11-1.fna%26_nc_gid%3DYsl4W4lVCPSjfFzTIr5GSQ%26_nc_ss%3D7b2a8%26oh%3D00_Af1rQ5Bd66tSj3iPhrVq42wJCSZk4l5JFAxsMMnoNMf-XA%26oe%3D69F50120/https/scontent.fmnl11-1.fna.fbcdn.net/v/t39.30808-6/488364665_668225025596323_1563923258061635188_n.jpg?format=webp&width=1341&height=1006" />
+          <img src="taas.jpg" />
           <div class="content">
             <h3>Roof Deck (8 to 12 Seater)</h3>
             <p>
@@ -76,7 +76,7 @@ session_start(); // THIS MUST BE AT THE TOP
     <div class="containercateg">
       <div class="det-grid">
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471819249225769/IMG_20260425_133014_415.jpg?ex=69eef64f&is=69eda4cf&hm=d792add9f8296fabf808ef6005e8ac1d9cf7e8a9a4b9865a129b17e8291da004&=&format=webp&width=527&height=703" />
+          <img src="first.jpg" />
           <div class="content">
             <h3>Garden View Nook (4 Seater)</h3>
             <p>
@@ -87,7 +87,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471820243144814/IMG_20260425_133051_925.jpg?ex=69eef64f&is=69eda4cf&hm=48fc7c3253a10b40a9e60a6cd89b7527933414c15cdf41e5c1107f7609069a7f&=&format=webp&width=527&height=703" />
+          <img src="2nd.jpg" />
           <div class="content">
             <h3>Garden Patio Table (6 Seater)</h3>
             <p>
@@ -98,7 +98,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471821463949392/IMG_20260425_133247_781.jpg?ex=69eef64f&is=69eda4cf&hm=f7a53037c6e83c018a7a60fae5c7d0c5438fbc1f6ed2b2964045fb796f920243&=&format=webp&width=527&height=703" />
+          <img src="3rd.jpg" />
           <div class="content">
             <h3>Grand Gathering Table (8 Seater)</h3>
             <p>
@@ -117,7 +117,7 @@ session_start(); // THIS MUST BE AT THE TOP
     <div class="containercateg">
       <div class="det-grid">
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472519924613150/IMG_20260425_133845_800.jpg?ex=69eef6f6&is=69eda576&hm=e21e7d3adf463ef9ae9ddc0b6d3f3388b9bd9ce512483a766c5c1278991bc503&=&format=webp&width=527&height=703" />
+          <img src="4th.jpg" />
           <div class="content">
             <h3>Classic Heritage Table (4 Seater)</h3>
             <p>
@@ -128,7 +128,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472520851427359/IMG_20260425_134028_049.jpg?ex=69eef6f6&is=69eda576&hm=6ebebc5fdf6c39a6ab5755f06a5a882a44056b45c51d4f573dae84d166ab2657&=&format=webp&width=527&height=703" />
+          <img src="5th.jpg" />
           <div class="content">
             <h3>Flexible Horizon Table (6-8 Seater)</h3>
             <p>
@@ -139,7 +139,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497473180145549312/IMG_20260425_134330_429.jpg?ex=69eef793&is=69eda613&hm=a2f92edbc7bbf9610679f5b6542c340df798bcb05550be18a2fdaec6ff383357&=&format=webp&width=527&height=703" />
+          <img src="6th.jpg" />
           <div class="content">
             <h3>Sunset Terrace (4 Seater)</h3>
             <p>
@@ -155,7 +155,7 @@ session_start(); // THIS MUST BE AT THE TOP
     <div class="containercateg">
       <div class="det-grid">
        <div class="det">
-  <img src="https://media.discordapp.net/attachments/1496377481652076586/1497473179403288626/IMG_20260425_134312_108.jpg?ex=69eef793&is=69eda613&hm=d84b60c732ce0d39c3aeeefea89bcf8309c08d6cbe1634be89e359452a8cbc37&=&format=webp&width=527&height=703" />
+  <img src="7th.jpg" />
   <div class="content">
     <h3>Overlook Date Nook (2 Seater)</h3>
     <p>
@@ -166,7 +166,7 @@ session_start(); // THIS MUST BE AT THE TOP
 </div>
 
        <div class="det">
-  <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472996451942490/IMG_20260425_134242_470.jpg?ex=69eef768&is=69eda5e8&hm=eea141ea17cdc74b5f7c77a9beb0172b38370ccb2814765986133c74dcddd748&=&format=webp&width=527&height=703" />
+  <img src="8th.jpg" />
   <div class="content">
     <h3>Bistro Breeze Deck (2-4 Seater)</h3>
     <p>
@@ -177,7 +177,7 @@ session_start(); // THIS MUST BE AT THE TOP
 </div>
 
        <div class="det">
-  <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471820830343238/IMG_20260425_133222_236.jpg?ex=69eef64f&is=69eda4cf&hm=63d2d3961944139d9ffada5702376f43c1ecdcc317ebc45f197954daa7522339&=&format=webp&width=527&height=703" />
+  <img src="9th.jpg" />
   <div class="content">
     <h3>Grand Indoor Suite (8-12 Seater)</h3>
     <p>
@@ -196,7 +196,7 @@ session_start(); // THIS MUST BE AT THE TOP
       <h1>Staycation you might like</h1>
       <div class="det-grid">
         <div class="det">
-          <img src="https://images-ext-1.discordapp.net/external/jSNiC5mc9-y5W0laxPpAPOdvubY50T0cqRlUy_H7xqY/%3Fstp%3Dcp6_dst-jpg_tt6%26_nc_cat%3D104%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeEogfdhV9vU6efkVvHUSY1acaZ2vkpZV11xpna-SllXXX78nrJ1dyuU8C7xBTclEQsEO-1d5Zb_3Vi0c7R1tyDR%26_nc_ohc%3Dctj8OjwR0ocQ7kNvwHLLyJq%26_nc_oc%3DAdobfu0FZ73rRwxIRdE7dBCIASoYzCOpPAEMQ4DtkqeawhH53zhXfr1jHyHw5iTV3Zk%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl11-1.fna%26_nc_gid%3Dm3ITcBGu-mcdJWPpdY3q1A%26_nc_ss%3D7b2a8%26oh%3D00_Af1HqU3b41uUoz_btnj94WuFYkNaPLDoF31Zjt0i0Vm7mQ%26oe%3D69F5171F/https/scontent.fmnl11-1.fna.fbcdn.net/v/t39.30808-6/490798877_679135114505314_6918265849661747113_n.jpg?format=webp&width=225&height=300" />
+          <img src="pulag.jpg" />
           <div class="content">
             <h3>Mt. Pulag</h3>
             <p>
@@ -207,7 +207,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://images-ext-1.discordapp.net/external/Ne60DgRgp1bnSPQY830AfsBYZ9VAk0JhDqEz6aKwTsc/%3F_nc_cat%3D100%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeFqII3eQ5Bvtx3_elbAIvB65p5hWLDgWQvmnmFYsOBZCzbjVX_ba_SrFSBeKjXqlYGbuAta3nqaCSSg8kTSBF5k%26_nc_ohc%3DwtpyMnbsQvcQ7kNvwEVjAOr%26_nc_oc%3DAdrWXqceLSUNARpq-ses6zuN48GfGNfxHujeRIuNgAVvzT-3aAogS7EFXbflQE3bA04%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl43-1.fna%26_nc_gid%3DdLeseQY0t2wdJZKdOxh04Q%26_nc_ss%3D7b2a8%26oh%3D00_Af0b84OJyVMDSUq7akms83PQ_wxtEtf-mmfH7V0UrzWLXA%26oe%3D69F50755/https/scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/490326750_679134121172080_3535331217717813190_n.jpg?format=webp&width=225&height=300" />
+          <img src="apo.jpg" />
           <div class="content">
             <h3>Mt. Apo</h3>
             <p>
@@ -218,7 +218,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://images-ext-1.discordapp.net/external/rA8jFnt8hxk9BJ8U4BDQFbJI9jtl_8OXn3lo_WbMYCE/%3Fstp%3Dcp6_dst-jpg_tt6%26_nc_cat%3D108%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeEYi9A7o4m13achF-D4dNy6Yah9jFO6SMFhqH2MU7pIwZDjqfmaLcOjumY-87HunPCBhQboG66ABtvhK7-_3ibb%26_nc_ohc%3DocSAXqbDeYIQ7kNvwFiYF_I%26_nc_oc%3DAdojh2bIiv9REj-vlbA04zCyWV6UJohZu4kwe89_gIeXG5KHUEqlnlbb4rHZ-T_va6c%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl43-1.fna%26_nc_gid%3DEtSbMqXs28aPIWarIuvKow%26_nc_ss%3D7b2a8%26oh%3D00_Af013eIBZhCaFqOmBzTB86iXz4iP-kR5CqIcKILKZFKXHw%26oe%3D69F4FDF6/https/scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/490473984_679135341171958_6103256923955071503_n.jpg?format=webp&width=225&height=300" />
+          <img src="halcon.jpg" />
           <div class="content">
             <h3>Mt. Halcon</h3>
             <p>
