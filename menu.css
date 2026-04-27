@@ -1,5 +1,5 @@
 body {
-  font-family: Arial;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
@@ -21,7 +21,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 5%;
+  padding: 11px 5%;
   width: 100%;
   box-sizing: border-box;
 }
@@ -35,7 +35,7 @@ header {
 nav a {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
+  margin-left: 45.5px;
   font-weight: bold;
 }
 

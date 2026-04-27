@@ -50,7 +50,7 @@ session_start(); // THIS MUST BE AT THE TOP
         </div>
 
         <div class="det">
-          <img src="https://images-ext-1.discordapp.net/external/ahaCe4awlP1OF8qSBLF_5iR2k9O7ZR3-T9SLc6aw2I0/%3F_nc_cat%3D106%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeEVi0uUZ71duDm-41I_Q5ocw4XQM_w8jJHDhdAz_DyMkU4V2211AsEv0KeBIl5IXHp4lNmf1pDGrak4kQRx7APV%26_nc_ohc%3D4RsHhvRniI0Q7kNvwHFrnXN%26_nc_oc%3DAdpKWtv9ulDNgwjNoj86Fg6uuH3e5UnmldAW6pOUA3SKYLgPk9ee9D3O9jeu7Lh2VWQ%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl43-1.fna%26_nc_gid%3DGekA5ZbcyBUUntCw2QK-CQ%26_nc_ss%3D7b2a8%26oh%3D00_Af1C4De7k4t-J86Xy9k4qQqN3ehv5oFCvtGrFFF08RAvBA%26oe%3D69F5148A/https/scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/495569644_694957336256425_1375155452132666931_n.jpg?format=webp" />
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1498266985166016653/image.png?ex=69f0895d&is=69ef37dd&hm=652444f82c08f6aaf78436f32bce148d71c1d47b5dacf5590b3726d633e56d4c&=&format=webp&quality=lossless&width=424&height=350" />
           <div class="content">
             <h3>Event Place (6 to 8 Seater)</h3>
             <p>
