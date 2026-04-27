@@ -396,6 +396,17 @@ $bestSellers = [
         }, 4000);
     }
 </script>
-
+<?php if (isset($_GET['deleted'])): ?>
+    <div class="expired-notice" id="deletedNotice">
+        🗑️ Your account has been permanently deleted.
+    </div>
+    <script>
+        setTimeout(() => {
+            const n = document.getElementById('deletedNotice');
+            n.style.opacity = '0';
+            setTimeout(() => n.remove(), 500);
+        }, 4000);
+    </script>
+<?php endif; ?>
 </body>
 </html>
