@@ -17,7 +17,7 @@ $average = round($avgRow['avg_rating'], 1);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard - Sikatan Sikada</title>
-    <link rel="stylesheet" href="admin_feedback.css">
+    <link rel="stylesheet" href="admin.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
@@ -28,10 +28,8 @@ $average = round($avgRow['avg_rating'], 1);
                 <h2>Admin<span>Panel</span></h2>
             </div>
             <ul class="nav-links">
-                <li><a href="#" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
-                <li><a href="#"><i class="fa-solid fa-utensils"></i> Menu Items</a></li>
-                <li><a href="#"><i class="fa-solid fa-calendar-days"></i> Reservations</a></li>
-                <li><a href="#" class="logout"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                <li><a href="admin_feedback.php" class="active"><i class="fa-solid fa-chart-line"></i> Dashboard</a></li>
+                <li><a href="admin_reservation.php"><i class="fa-solid fa-calendar-days"></i> Reservations</a></li>            
             </ul>
         </nav>
 

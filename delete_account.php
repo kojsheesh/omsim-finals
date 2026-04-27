@@ -10,17 +10,14 @@ if (!isset($_SESSION['user_email'])) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = $mysqli->real_escape_string($_SESSION['user_email']);
 
-    // Delete user's reservations first (if you have a reservations table)
-    $mysqli->query("DELETE FROM reservations WHERE email = '$email'");
-
-    // Delete the user account
+    // Delete the user account from users table
     $mysqli->query("DELETE FROM users WHERE email = '$email'");
 
     // Destroy the session
     session_unset();
     session_destroy();
 
-    // Redirect to home with a message
+    // Redirect to home with deleted notice
     header("Location: index.php?deleted=1");
     exit();
 }
