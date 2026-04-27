@@ -47,7 +47,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Immerse your group in the true spirit of Sikatan Sikada Café at this signature common table. Directly overlooked by our vibrant, handcrafted yellow sun mural—the symbol of the café's soul and name—this spot blends our favorite industrial-rustic aesthetic with the warmth of shared experiences.
             </p>
-            <a href="omsim.php?item=Common%20Table" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -58,7 +58,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Elevate your group gathering at our premier 8-seater long table, designed specifically for those who believe that great food is best enjoyed with even better company. Situated in the heart of our breezy, open-air deck, this spot offers the ultimate "overlooking" experience that has made Sikatan Sikada a destination in Binangonan.
             </p>
-            <a href="omsim.php?item=Panorama%20Group%20Deck" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -69,7 +69,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Designed for the ultimate group hangout, our Corner Horizon table offers a unique vantage point of the Binangonan hills. Positioned at the edge of our glass-paneled deck, this expansive table allows your group to feel fully immersed in the landscape, providing a panoramic view that stretches from the lush valley to the distant lake.
             </p>
-            <a href="omsim.php?item=Panorama%20Group%20Deck%202" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
       </div>
@@ -84,7 +84,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Perfect for small families or a double date. This intimate 4-seater spot offers a more private experience while still enjoying the fresh air and rustic charm of our garden-side seating.
             </p>
-            <a href="omsim.php?item=Garden%20View%20Nook" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -95,7 +95,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Enjoy a balanced outdoor dining experience with our 6-seater patio table. Perfect for family lunches or catching up with friends, this table provides a spacious yet cozy atmosphere under the shade, surrounded by our café's natural greenery.
             </p>
-            <a href="omsim.php?item=Garden%20Patio%20Table" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -106,7 +106,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Our most spacious option for the ultimate Sikatan Sikada experience. Perfect for birthday celebrations, reunions, or large family dinners. This long table ensures everyone has a seat at the heart of the conversation while enjoying the café's refreshing breeze.
             </p>
-            <a href="omsim.php?item=Grand%20Gathering%20Table" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
       </div>
@@ -125,7 +125,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Our Classic Heritage Table offers a timeless and sturdy design, ideal for guests who appreciate a traditional dining atmosphere. Positioned in a quiet, accessible area of the café, it provides the perfect comfort for long conversations and relaxing meals.
             </p>
-            <a href="omsim.php?item=Classic%20Heritage%20Table" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -136,7 +136,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Our most versatile seating option. This classic wooden 6-seater can be comfortably expanded to accommodate up to 8 guests. Located in a breezy spot with a great view, it’s perfect for groups that might have a few extra friends joining last minute.
             </p>
-            <a href="omsim.php?item=Flexible%20Horizon%20Table&min=6&max=8" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -147,7 +147,7 @@ session_start(); // THIS MUST BE AT THE TOP
             <p>
               Located in our most popular open-air section, the Sunset Terrace features a row of 4-seater tables designed for those who love the "overlooking" vibe. Enjoy the refreshing Binangonan breeze and a panoramic view while you dine in this vibrant, airy space.
             </p>
-            <a href="omsim.php?item=Sunset%20Terrace%204-Seater" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
       </div>
@@ -163,7 +163,7 @@ session_start(); // THIS MUST BE AT THE TOP
     <p>
       Our most intimate seating option, designed specifically for couples. This 2-seater nook provides a private, cozy corner with an unobstructed view of the horizon. Whether it's a first date or an anniversary, this spot offers the quiet charm and romantic atmosphere you’re looking for.
     </p>
-    <a href="omsim.php?item=Overlook%20Date%20Nook" class="btn">Reserve</a>
+    <a href="cart.php" class="btn">Reserve</a>
   </div>
 </div>
 
@@ -174,7 +174,7 @@ session_start(); // THIS MUST BE AT THE TOP
     <p>
       Our most flexible outdoor seating! These bistro-style tables are perfect for a quick solo coffee, a cozy date for two, or can be combined for a group of four. Located right on the deck, it’s the best spot to feel the wind and soak in the casual café atmosphere.
     </p>
-    <a href="omsim.php?item=Bistro%20Breeze%20Deck&min=2&max=4" class="btn">Reserve</a>
+    <a href="cart.php" class="btn">Reserve</a>
   </div>
 </div>
 
@@ -185,7 +185,7 @@ session_start(); // THIS MUST BE AT THE TOP
     <p>
       Our largest indoor seating option, perfect for big families, barkada reunions, or corporate meetings. This expansive long table offers a comfortable, air-cooled environment while keeping everyone together in one vibrant space. 
     </p>
-    <a href="omsim.php?item=Grand%20Indoor%20Suite&min=8&max=12" class="btn">Reserve</a>
+    <a href="cart.php" class="btn">Reserve</a>
   </div>
 </div>
       </div>
@@ -207,7 +207,7 @@ session_start(); // THIS MUST BE AT THE TOP
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -221,7 +221,7 @@ session_start(); // THIS MUST BE AT THE TOP
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
 
@@ -235,7 +235,7 @@ session_start(); // THIS MUST BE AT THE TOP
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
               nisi ut aliquip ex ea commodo consequat.
             </p>
-            <a href="omsim.php" class="btn">Reserve</a>
+            <a href="cart.php" class="btn">Reserve</a>
           </div>
         </div>
       </div>
