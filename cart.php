@@ -1,3 +1,19 @@
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+// THE GUARD: If not logged in, kick them out to login.php
+if (!isset($_SESSION['user_email'])) {
+    header("Location: login.php");
+    exit();
+}
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -701,15 +717,31 @@ function handleCheckout() {
   const orderPayload = Object.values(cart).map(({ id, name, price, qty }) => ({
     id, name, price, qty, subtotal: price * qty
   }));
-  console.log("📦 ORDER PAYLOAD:", orderPayload);
- 
-  // fetch('/api/orders', {
-  //   method:'POST',
-  //   headers:{'Content-Type':'application/json'},
-  //   body: JSON.stringify({ items: orderPayload })
-  // }).then(r=>r.json()).then(d=>{ window.location.href=`/checkout/${d.orderId}`; });
- 
-  alert(`✅ Order placed!\n${orderPayload.length} item(s). Check console for payload.`);
+
+  if (orderPayload.length === 0) {
+    alert("Wala pa sa cart! Pumili ka muna. 😄");
+    return;
+  }
+
+  // Send the data to the PHP backend
+  fetch('place_order.php', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ items: orderPayload })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === "success") {
+      alert("✅ Order placed! Salamat sa pag-reserve sa Sikada.");
+      window.location.href = "index.php"; // Redirect home
+    } else {
+      alert("❌ Error: " + data.message);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert("Connection error. Please try again.");
+  });
 }
  
 // INIT

@@ -31,7 +31,11 @@ if (!isset($_SESSION['user_email'])) {
         <h1>Reservation</h1>
 
         <form action="insert.php" method="POST">
-            <div class="field"><label>Email Address</label><input type="email" name="email" required placeholder="example@mail.com"></div>
+            <div class="field">
+    <label>Email Address</label>
+    <input type="email" name="email" required 
+           value="<?php echo $_SESSION['user_email']; ?>" readonly>
+</div>
             <div class="field"><label>Full Name</label><input type="text" name="name" required placeholder="Enter your full name"></div>
 
             <div class="field" style="width: 48%;"><label>Date</label><input type="date" name="date" required></div>

@@ -1,25 +1,40 @@
 <?php
-include 'reservedb.php'; // Make sure this file has your $conn variable
+session_start();
+include "reservedb.php"; 
 
-// Capturing data from the form
-$email   = $_POST['email'];
-$name    = $_POST['name'];
-$number  = $_POST['number']; // This matches <input name="number">
-$date    = $_POST['date'];
-$time    = $_POST['time'];
-$event   = $_POST['event'];
-$num     = $_POST['num'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") 
+    {
+    // 1. Collect data from your omsim.php form
+    $email = $_POST['email'];
+    $name = $_POST['name'];
+    $date = $_POST['date'];
+    $time = $_POST['time'];
+    $event = $_POST['event'];
+    $num = $_POST['num'];
+    $item = $_POST['reserved_item'];
 
-// SQL Query using the exact column names from your screenshot
-$sql = "INSERT INTO reservation (`Email Address`, `Full Name`, `Contact Number`, `Date of Reservation`, `Time of Reservation`, `Event Type`, `Number of Packs`) 
-        VALUES ('$email', '$name', '$number', '$date', '$time', '$event', '$num')";
+    // 2. Prepare the query using your exact column names
+    $query = "INSERT INTO reservation (
+                `Email Address`, 
+                `Full Name`, 
+                `Date of Reservation`, 
+                `Time of Reservation`, 
+                `Event Type`, 
+                `Number of Packs`, 
+                `Reserved Item`
+              ) VALUES (?, ?, ?, ?, ?, ?, ?)";
+    
+    $stmt = $conn->prepare($query);
+    $stmt->bind_param("sssssis", $email, $name, $date, $time, $event, $num, $item);
 
-if (mysqli_query($conn, $sql)) {
-    echo "<script>
-            alert('Reservation Successful!');
-            window.location.href='index.php'; // Redirect back to home
-          </script>";
+if ($stmt->execute()) {
+    // THIS IS THE FIX: Capture the ID of the reservation just made
+    $_SESSION['last_reservation_id'] = $conn->insert_id; 
+    
+    header("Location: cart.php");
+    exit();
 } else {
-    echo "Error: " . mysqli_error($conn);
+        echo "Error executing reservation: " . $conn->error;
+    }
 }
 ?>
