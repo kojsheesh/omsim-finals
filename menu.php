@@ -39,7 +39,7 @@ session_start(); // THIS MUST BE AT THE TOP
       <h1>Tables and Atmosphere</h1>
       <div class="det-grid">
         <div class="det">
-          <img src="event place.jpg" />
+          <img src="event_place.jpg" />
           <div class="content">
             <h3>Event Table (Seats 5 to 6)</h3>
             <p>
