@@ -6,7 +6,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 // Auto Termination
-$timeout = 5; // 5 secs (change to your liking)
+$timeout = 60; // 1 minute (change to your liking)
 
 if (isset($_SESSION['last_activity'])) {
     $elapsed = time() - $_SESSION['last_activity'];
