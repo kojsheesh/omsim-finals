@@ -1,5 +1,10 @@
+<?php
+session_start(); // THIS MUST BE AT THE TOP
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,6 +19,17 @@
     <div class="header-container">
         <div class="logo-text">Sikatan Sikada</div> 
         
+    <title>Contact - Sikatan Sikada Cafe</title>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="https://media.discordapp.net/attachments/1496377481652076586/1497614928008450158/logo.jpg?ex=69ee2a17&is=69ecd897&hm=aaa80ee66571838b6d3b92bef5219aed8a871dac8bec03f94f49e1de8b497ab6&=&format=webp&width=703&height=703" alt="Logo">
+        </div>
         <nav>
             <a href="index.php">Home</a>
             <a href="about.php">About</a>
@@ -65,4 +81,5 @@
 
 </div>
 </body>
+
 </html>

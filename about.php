@@ -1,3 +1,6 @@
+<?php
+session_start(); // THIS MUST BE AT THE TOP
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,21 +10,31 @@
     <link rel="stylesheet" href="style.css">
 
 
-     <header>
-      <div class="logo">
-        <img src="https://scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/414728256_380365187715643_1319917961571997362_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=1d70fc&_nc_eui2=AeFQUpA0R51jfbXZhayH37dWyGrljN9-icDIauWM336JwDUg88Lc9v2uoi16LPeNoRxWo04MhijL2tsH4rhlP4H2&_nc_ohc=fZ8ej01yNCwQ7kNvwFS9bXl&_nc_oc=Adp2Xe9A3VnOwB-ryHsgN52pB4w13-eH1GUbsZ7_zJq9C7NiaePxy_lIYDA2NNy2spQ&_nc_zt=23&_nc_ht=scontent.fmnl43-1.fna&_nc_gid=D0aE1uqQO3WDQn1lIV3wKA&_nc_ss=7a3a8&oh=00_Af0tkLtgHqpkP_9RyblRL23UhigiuNhF9KmaH1B6lai0tA&oe=69E4B866" alt="Logo">
-    </div>
-    <nav>
-        <a href="index.php">Home</a>
-        <a href="about.php">About</a>
-        <a href="menu.php">Menu</a>
-        <a href="contact.php">Contact</a>
-        <a href="reservationform.php">Reserve Now</a>
-    </nav>
-    </header>
+
 </head>
 
 <body>
+    <header>
+        <div class="logo">
+            <img
+                src="https://media.discordapp.net/attachments/1496377481652076586/1497614928008450158/logo.jpg?ex=69ee2a17&is=69ecd897&hm=aaa80ee66571838b6d3b92bef5219aed8a871dac8bec03f94f49e1de8b497ab6&=&format=webp&width=703&height=703"
+                alt="Logo" />
+        </div>
+
+        <nav>
+            <a href="index.php">Home</a>
+            <a href="about.php">About</a>
+            <a href="menu.php">Menu</a>
+            <a href="contact.php">Contact</a>
+            <?php if (isset($_SESSION['user_email'])): ?>
+                <a href="omsim.php">Reserve Now</a>
+                <a href="logout.php">Logout</a>
+            <?php else: ?>
+                <a href="login.php">Login</a>
+            <?php endif; ?>
+        </nav>
+        
+    </header>
     <h1>SIKATAN SIKADA CAFE</h1>
 
     <div class="gallery">
@@ -241,6 +254,166 @@
             <img src="https://media.discordapp.net/attachments/1496377481652076586/1497473180145549312/IMG_20260425_134330_429.jpg?ex=69eda613&is=69ec5493&hm=3e2a5ce4506b938014d888a2ca331840cb3ef8155bbfa266fa94b612eccc06c5&=&format=webp&width=527&height=703">
         </a>
     </div>
+<!-- ===================== -->
+<!-- FAQ FLOATING WIDGET   -->
+<!-- ===================== -->
+<style>
+    .faq-fab {
+        position: fixed;
+        bottom: 28px;
+        right: 28px;
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: #ffcc00;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    }
+    .faq-fab:hover { transform: scale(1.08); }
+
+    .faq-panel {
+        position: fixed;
+        bottom: 94px;
+        right: 28px;
+        width: 340px;
+        max-height: 480px;
+        background: #1a1a1a;
+        border-radius: 16px;
+        border: 1px solid rgba(255,204,0,0.25);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        z-index: 9998;
+        opacity: 0;
+        transform: translateY(16px) scale(0.97);
+        pointer-events: none;
+        transition: opacity 0.25s, transform 0.25s;
+    }
+    .faq-panel.faq-open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: all;
+    }
+    .faq-header {
+        padding: 16px 20px 12px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,204,0,0.07);
+    }
+    .faq-header h2 { margin: 0 0 2px; font-size: 15px; font-weight: 600; color: #ffcc00; }
+    .faq-header p { margin: 0; font-size: 12px; color: rgba(255,255,255,0.45); line-height: 1.4; }
+    .faq-list { overflow-y: auto; flex: 1; padding: 10px 0; }
+    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+        width: 100%;
+        background: none;
+        border: none;
+        padding: 13px 20px;
+        text-align: left;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        transition: background 0.15s;
+    }
+    .faq-question:hover { background: rgba(255,204,0,0.06); }
+    .faq-question.faq-active { color: #ffcc00; }
+    .faq-chevron { flex-shrink: 0; width: 16px; height: 16px; transition: transform 0.25s; opacity: 0.5; }
+    .faq-question.faq-active .faq-chevron { transform: rotate(180deg); opacity: 1; }
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, padding 0.2s;
+        padding: 0 20px;
+        font-size: 12.5px;
+        color: rgba(255,255,255,0.6);
+        line-height: 1.6;
+    }
+    .faq-answer.faq-ans-open { max-height: 200px; padding: 0 20px 14px; }
+    .faq-footer {
+        padding: 12px 20px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        text-align: center;
+        font-size: 11.5px;
+        color: rgba(255,255,255,0.3);
+    }
+</style>
+
+<button class="faq-fab" id="faqBtn" aria-label="Open FAQ">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="10"/>
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+        <line x1="12" y1="17" x2="12.01" y2="17"/>
+    </svg>
+</button>
+
+<div class="faq-panel" id="faqPanel">
+    <div class="faq-header">
+        <h2>Sikatan Sikada Cafe — FAQ</h2>
+        <p>Common questions answered for you</p>
+    </div>
+    <div class="faq-list" id="faqList"></div>
+    <div class="faq-footer">Tuloy po kayo! We're happy to help.</div>
+</div>
+
+<script>
+    const faqs = [
+        { q: "What are your operating hours?", a: "We are open every day from 6:00 AM to 1:00 AM, so whether you're an early riser or a late-night diner, we've got you covered!" },
+        { q: "Do you offer dine-in and takeout?", a: "We currently offer dine-in only. Come visit us and enjoy your meal in the relaxing ambiance of Sikatan Sikada Cafe!" },
+        { q: "Do you accommodate dietary restrictions?", a: "Yes! If you have any food allergies or dietary needs, please inform our staff upon ordering and we will do our best to guide you to safe and suitable menu options." },
+        { q: "How do I make a reservation?", a: "Simply log in to your account and click 'Reserve Now' in the navigation bar. Choose your preferred date, time, and party size." },
+        { q: "Where are you located?", a: "You can find our full address and a map on our Contact page. We are easily accessible by public transport and have parking available." },
+    ];
+
+    const faqList = document.getElementById('faqList');
+    faqs.forEach((f, i) => {
+        const item = document.createElement('div');
+        item.className = 'faq-item';
+        item.innerHTML = `
+            <button class="faq-question" onclick="toggleFaq(${i}, this)">
+                ${f.q}
+                <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                </svg>
+            </button>
+            <div class="faq-answer" id="faqAns${i}">${f.a}</div>
+        `;
+        faqList.appendChild(item);
+    });
+
+    function toggleFaq(i, btn) {
+        const ans = document.getElementById('faqAns' + i);
+        const isOpen = ans.classList.contains('faq-ans-open');
+        document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('faq-ans-open'));
+        document.querySelectorAll('.faq-question').forEach(b => b.classList.remove('faq-active'));
+        if (!isOpen) {
+            ans.classList.add('faq-ans-open');
+            btn.classList.add('faq-active');
+        }
+    }
+
+    const faqBtn = document.getElementById('faqBtn');
+    const faqPanel = document.getElementById('faqPanel');
+    let faqOpen = false;
+
+    faqBtn.addEventListener('click', () => {
+        faqOpen = !faqOpen;
+        faqPanel.classList.toggle('faq-open', faqOpen);
+        faqBtn.innerHTML = faqOpen
+            ? `<svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.5" stroke-linecap="round" width="22" height="22"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`
+            : `<svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
+    });
+</script>
 </body>
 
 </html>

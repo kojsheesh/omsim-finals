@@ -1,39 +1,13 @@
-/* LOGO  */
-.logo img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-/* background */
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 50px;
-
+body {
+  font-family: Arial;
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
-
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
 
-/* TEXT STYLE */
-.hero-text {
-  color: white;
-  max-width: 50%;
-}
-
-.hero-text h1 {
-  font-size: 50px;
-}
-
-.hero-text h3 {
-  color: orange;
-}
-/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -42,39 +16,43 @@
 
 /* NAVBAR */
 header {
+  background-color: #1a1a1a;
+  border-bottom: 3px solid #ffcc00;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
-  background: #000; /* dark navbar */
+  padding: 10px 5%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* logo */
 .logo img {
   width: 60px;
   height: 60px;
   border-radius: 50%;
 }
 
-/* NAV*/
 nav a {
-  margin: 0 15px;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+  margin-left: 20px;
   font-weight: bold;
 }
 
+nav a:hover {
+  color: #ffcc00;
+}
 
-
-/* menu html*/
-.body {
+/* BODY */
+body {
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ee1a21&is=69ecc8a1&hm=d253a2d67e61cbce3c41f10142585460202e26133cbe3ab1bde4370048a65698&=&format=webp&width=600&height=801");
-
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
 }
+
 .menus {
   margin: 20px;
   padding: 0px;
@@ -94,6 +72,7 @@ nav a {
   flex-wrap: wrap;
   margin-top: 20px;
 }
+
 .det {
   width: 325px;
   background-color: #222222;
@@ -103,6 +82,7 @@ nav a {
   margin: 20px;
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
+
 .det img {
   width: 100%;
   height: auto;
