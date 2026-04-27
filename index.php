@@ -5,9 +5,9 @@ session_start(); // THIS MUST BE AT THE TOP
 <?php
 // Best Seller Product Data
 $bestSellers = [
-    ["name" => "Halo-Halo", "price" => 189.00, "badge" => "🔥 Top Pick", "img" => "https://cdn.discordapp.com/attachments/1312440437679591427/1497940548802314260/image.png?ex=69ef5959&is=69ee07d9&hm=5346cc6c711aaa82e412a264aeea436a6216d686a99105b26ce00f48f43263f4&"],
-    ["name" => "Sinigang na Ribs", "price" => 450.00, "badge" => "⭐ Best Rated", "img" => "https://cdn.discordapp.com/attachments/1312440437679591427/1497942037167866049/image.png?ex=69ef5abc&is=69ee093c&hm=fc5c8b506a7e83f8e93b2168f5f0f6e680f26b396f74952f311063042cf7927d&"],
-    ["name" => "Matcha Latte", "price" => 159.00, "badge" => "💥 Hot Deal", "img" => "https://cdn.discordapp.com/attachments/1312440437679591427/1497943210968875109/image.png?ex=69ef5bd3&is=69ee0a53&hm=373790ddcc44eb7135e42b798d5fb995379a7ad24eb7daa0d9dc1693a8e1129a&"],
+    ["name" => "Halo-Halo", "price" => 189.00, "badge" => "🔥 Top Pick", "img" => "halo.png"],
+    ["name" => "Sinigang na Ribs", "price" => 450.00, "badge" => "⭐ Best Rated", "img" => "sinigang.png"],
+    ["name" => "Matcha Latte", "price" => 159.00, "badge" => "💥 Hot Deal", "img" => "matcha.png"],
 ];
 ?>
 <!DOCTYPE html>
