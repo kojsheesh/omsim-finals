@@ -280,13 +280,11 @@ if (isset($_POST['login'])) {
 
 <script>
     const faqs = [
-        { q: "What are your operating hours?", a: "We're open Monday to Sunday, 9:00 AM – 9:00 PM. We may have extended hours during holidays — follow our socials for updates!" },
+        { q: "What are your operating hours?", a: "We are open every day from 6:00 AM to 1:00 AM, so whether you're an early riser or a late-night diner, we've got you covered!" },
+        { q: "Do you offer dine-in and takeout?", a: "We currently offer dine-in only. Come visit us and enjoy your meal in the relaxing ambiance of Sikatan Sikada Cafe!" },
+        { q: "Do you accommodate dietary restrictions?", a: "Yes! If you have any food allergies or dietary needs, please inform our staff upon ordering and we will do our best to guide you to safe and suitable menu options." },
         { q: "How do I make a reservation?", a: "Simply log in to your account and click 'Reserve Now' in the navigation bar. Choose your preferred date, time, and party size." },
-        { q: "Is there a minimum spend for reservations?", a: "We have a minimum spend of ₱300 per head for reserved tables. Walk-in guests have no minimum requirement." },
-        { q: "Do you offer dine-in and takeout?", a: "Yes! We offer both dine-in and takeout. For takeout orders, please call us or place your order in advance to reduce wait time." },
-        { q: "Are your ingredients locally sourced?", a: "Absolutely. We pride ourselves on using fresh, locally sourced Filipino ingredients to keep every dish authentic and flavorful." },
-        { q: "Do you accommodate dietary restrictions?", a: "We do our best to accommodate requests. Please inform our staff of any allergies or dietary needs when ordering." },
-        { q: "Where are you located?", a: "You can find our full address and a map on our Contact page. We're easily accessible by public transport and have parking available." },
+        { q: "Where are you located?", a: "You can find our full address and a map on our Contact page. We are easily accessible by public transport and have parking available." },
     ];
 
     const faqList = document.getElementById('faqList');
@@ -328,9 +326,7 @@ if (isset($_POST['login'])) {
             : `<svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" width="26" height="26"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>`;
     });
 </script>
-<!-- ======================== -->
-<!-- GENERAL T&C MODAL        -->
-<!-- ======================== -->
+<!-- GENERAL T&C MODAL-->
 <style>
     .tnc-overlay {
         position: fixed;
