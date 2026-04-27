@@ -88,8 +88,24 @@ if (isset($_SESSION['session_status']) && $_SESSION['session_status'] == 1) {
                     </tr>
 
                     <tr>
+<<<<<<< Updated upstream
 
                         <td colspan="2"><input type="password" name="password" /></td>
+=======
+                        <td colspan="2"><input type="password" name="password" required /></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <br>
+                            <div class="g-recaptcha" data-sitekey="6Le0DcssAAAAACPv1LdYyROfcxNimO0PaN-RXeiC"></div>
+<br>
+                            <input type="submit" name="login" value="Log in" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td> <br>Don't have an account?</td>
+                        <td> <br><a href="signup.php">Sign Up</a></td>
+>>>>>>> Stashed changes
                     </tr>
 
                     <tr>

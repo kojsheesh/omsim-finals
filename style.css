@@ -14,7 +14,11 @@
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+<<<<<<< Updated upstream
     url("Photos/body.jpg");
+=======
+    url("https://media.discordapp.net/attachments/1496377481652076586/1497597791965413467/body.jpg?ex=69ef6ba1&is=69ee1a21&hm=edfbaed97d04bc7a7a62316c2d80b63baea3a4a90ef65ad73ba6a0958756f2a2&=&format=webp&width=600&height=801");
+>>>>>>> Stashed changes
 
   background-size: cover;
   background-position: center;
@@ -147,7 +151,7 @@ header {
 
   background:
     linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("Photos/body.jpg");
+    url("https://github.com/kojsheesh/omsim-finals/blob/pinakaupdated/body.jpg?raw=true");
 
   background-size: cover;
   background-position: center;
@@ -181,7 +185,7 @@ header {
 td {
   text-align: left;
 }
-
+input[type="email"],
 input[type="text"],
 input[type="password"] {
   background-color: #d1d1d100;
