@@ -39,33 +39,33 @@ session_start(); // THIS MUST BE AT THE TOP
       <h1>Tables and Atmosphere</h1>
       <div class="det-grid">
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471817538076782/IMG_20260425_132503_992.jpg?ex=69eda4ce&is=69ec534e&hm=2fdb3515cd9fba8a94fd54ac484d50fdc036eaeb7754a3a5f534fcde9e0488c3&=&format=webp&width=527&height=703" />
+          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497472520398438480/IMG_20260425_133938_952.jpg?ex=69f04876&is=69eef6f6&hm=9e22688d6cce0f36225aa7ecccb378c6e29482fd7c7c5f6f98f18253df8163fc&=&format=webp&width=1203&height=902" />
           <div class="content">
             <h3>Common Table (Seats 5 to 6)</h3>
             <p>
-              Immerse your group in the true spirit of Sikatan Sikada Café at this signature common table. Directly overlooked by our vibrant, handcrafted yellow sun mural—the symbol of the café's soul and name—this spot blends our favorite industrial-rustic aesthetic with the warmth of shared experiences.
+             Perfect for small groups seeking a quiet and cozy escape, this 4-seater nook offers a relaxing garden-side setting. Surrounded by greenery, it provides a peaceful atmosphere ideal for intimate conversations, casual meals, or a simple break away from the crowd.
             </p>
             <a href="omsim.php?item=Common%20Table" class="btn">Reserve</a>
           </div>
         </div>
 
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471818083209297/IMG_20260425_132533_341.jpg?ex=69eda4cf&is=69ec534f&hm=9fc96f5ead4d6a8444ba334007a4d194852f46b4877a56b536d1ec75a9d8fdbc&=&format=webp&width=527&height=703" />
+          <img src="https://images-ext-1.discordapp.net/external/ahaCe4awlP1OF8qSBLF_5iR2k9O7ZR3-T9SLc6aw2I0/%3F_nc_cat%3D106%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeEVi0uUZ71duDm-41I_Q5ocw4XQM_w8jJHDhdAz_DyMkU4V2211AsEv0KeBIl5IXHp4lNmf1pDGrak4kQRx7APV%26_nc_ohc%3D4RsHhvRniI0Q7kNvwHFrnXN%26_nc_oc%3DAdpKWtv9ulDNgwjNoj86Fg6uuH3e5UnmldAW6pOUA3SKYLgPk9ee9D3O9jeu7Lh2VWQ%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl43-1.fna%26_nc_gid%3DGekA5ZbcyBUUntCw2QK-CQ%26_nc_ss%3D7b2a8%26oh%3D00_Af1C4De7k4t-J86Xy9k4qQqN3ehv5oFCvtGrFFF08RAvBA%26oe%3D69F5148A/https/scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/495569644_694957336256425_1375155452132666931_n.jpg?format=webp" />
           <div class="content">
             <h3>Panorama Group Deck (8 Seater)</h3>
             <p>
-              Elevate your group gathering at our premier 8-seater long table, designed specifically for those who believe that great food is best enjoyed with even better company. Situated in the heart of our breezy, open-air deck, this spot offers the ultimate "overlooking" experience that has made Sikatan Sikada a destination in Binangonan.
+              Enjoy a comfortable outdoor dining experience with this 6-seater patio table. Designed for small gatherings, it balances space and coziness under a shaded area, letting guests dine while taking in the refreshing ambiance of the garden.
             </p>
             <a href="omsim.php?item=Panorama%20Group%20Deck" class="btn">Reserve</a>
           </div>
         </div>
 
         <div class="det">
-          <img src="https://media.discordapp.net/attachments/1496377481652076586/1497471818582462464/IMG_20260425_132541_968.jpg?ex=69eda4cf&is=69ec534f&hm=c0f473764a2f541dc4ddcb675f4ec1f64df02c30d83c2620849ac2d7c769cc48&=&format=webp&width=527&height=703" />
+          <img src="https://images-ext-1.discordapp.net/external/1KGMAo58uhu7fQHlCa2n3o2uiz6FNOO0JfdwP2ohEcU/%3Fstp%3Dcp6_dst-jpg_tt6%26_nc_cat%3D109%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeGrNUiqdtioAg1WQs2bz41hggvZtifZU2uCC9m2J9lTa4zpn-xWKJv1q4rBuuEjVW0ExBBip0pJLCrol8qvPilv%26_nc_ohc%3D8yhmpzyb2qsQ7kNvwGSXJkk%26_nc_oc%3DAdou3Shu5gzO_lWj5MFZDxiR61mMqVZ9MTeeRpnTEGbizbMcxk2MXtQ0pYzMNGQpz-0%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl11-1.fna%26_nc_gid%3DYsl4W4lVCPSjfFzTIr5GSQ%26_nc_ss%3D7b2a8%26oh%3D00_Af1rQ5Bd66tSj3iPhrVq42wJCSZk4l5JFAxsMMnoNMf-XA%26oe%3D69F50120/https/scontent.fmnl11-1.fna.fbcdn.net/v/t39.30808-6/488364665_668225025596323_1563923258061635188_n.jpg?format=webp&width=1341&height=1006" />
           <div class="content">
             <h3>Panorama Group Deck 2 (8 Seater)</h3>
             <p>
-              Designed for the ultimate group hangout, our Corner Horizon table offers a unique vantage point of the Binangonan hills. Positioned at the edge of our glass-paneled deck, this expansive table allows your group to feel fully immersed in the landscape, providing a panoramic view that stretches from the lush valley to the distant lake.
+              Designed for larger groups, this spacious 8-seater table is perfect for celebrations, reunions, or family get-togethers. With ample seating and a welcoming setup, it creates a lively dining experience where everyone can comfortably share meals and moments together.
             </p>
             <a href="omsim.php?item=Panorama%20Group%20Deck%202" class="btn">Reserve</a>
           </div>
@@ -193,45 +193,36 @@ session_start(); // THIS MUST BE AT THE TOP
 
 
     <div class="containercateg">
-      <h1>Reservations you might like</h1>
+      <h1>Staycation you might like</h1>
       <div class="det-grid">
         <div class="det">
-          <img src="Photos\dummy_photo.jpg" />
+          <img src="https://images-ext-1.discordapp.net/external/jSNiC5mc9-y5W0laxPpAPOdvubY50T0cqRlUy_H7xqY/%3Fstp%3Dcp6_dst-jpg_tt6%26_nc_cat%3D104%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeEogfdhV9vU6efkVvHUSY1acaZ2vkpZV11xpna-SllXXX78nrJ1dyuU8C7xBTclEQsEO-1d5Zb_3Vi0c7R1tyDR%26_nc_ohc%3Dctj8OjwR0ocQ7kNvwHLLyJq%26_nc_oc%3DAdobfu0FZ73rRwxIRdE7dBCIASoYzCOpPAEMQ4DtkqeawhH53zhXfr1jHyHw5iTV3Zk%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl11-1.fna%26_nc_gid%3Dm3ITcBGu-mcdJWPpdY3q1A%26_nc_ss%3D7b2a8%26oh%3D00_Af1HqU3b41uUoz_btnj94WuFYkNaPLDoF31Zjt0i0Vm7mQ%26oe%3D69F5171F/https/scontent.fmnl11-1.fna.fbcdn.net/v/t39.30808-6/490798877_679135114505314_6918265849661747113_n.jpg?format=webp&width=225&height=300" />
           <div class="content">
-            <h3>RecommReservation 1</h3>
+            <h3>Mt. Pulag</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Inspired by the serene beauty of Mt. Pulag, this room offers a calm and refreshing atmosphere. With its cozy setup and inviting interior, it’s perfect for those seeking a relaxing retreat, whether for a short break or a longer staycation experience.
             </p>
             <a href="omsim.php" class="btn">Reserve</a>
           </div>
         </div>
 
         <div class="det">
-          <img src="Photos\dummy_photo.jpg" />
+          <img src="https://images-ext-1.discordapp.net/external/Ne60DgRgp1bnSPQY830AfsBYZ9VAk0JhDqEz6aKwTsc/%3F_nc_cat%3D100%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeFqII3eQ5Bvtx3_elbAIvB65p5hWLDgWQvmnmFYsOBZCzbjVX_ba_SrFSBeKjXqlYGbuAta3nqaCSSg8kTSBF5k%26_nc_ohc%3DwtpyMnbsQvcQ7kNvwEVjAOr%26_nc_oc%3DAdrWXqceLSUNARpq-ses6zuN48GfGNfxHujeRIuNgAVvzT-3aAogS7EFXbflQE3bA04%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl43-1.fna%26_nc_gid%3DdLeseQY0t2wdJZKdOxh04Q%26_nc_ss%3D7b2a8%26oh%3D00_Af0b84OJyVMDSUq7akms83PQ_wxtEtf-mmfH7V0UrzWLXA%26oe%3D69F50755/https/scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/490326750_679134121172080_3535331217717813190_n.jpg?format=webp&width=225&height=300" />
           <div class="content">
-            <h3>RecommReservation 2</h3>
+            <h3>Mt. Apo</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+               Experience a cozy and welcoming stay inspired by the country’s highest peak. This room offers a relaxing space with a clean, modern interior and a touch of rustic charm. Perfect for guests looking to unwind, it provides comfort and privacy for a peaceful staycation escape.
             </p>
             <a href="omsim.php" class="btn">Reserve</a>
           </div>
         </div>
 
         <div class="det">
-          <img src="Photos\dummy_photo.jpg" />
+          <img src="https://images-ext-1.discordapp.net/external/rA8jFnt8hxk9BJ8U4BDQFbJI9jtl_8OXn3lo_WbMYCE/%3Fstp%3Dcp6_dst-jpg_tt6%26_nc_cat%3D108%26ccb%3D1-7%26_nc_sid%3D7b2446%26_nc_eui2%3DAeEYi9A7o4m13achF-D4dNy6Yah9jFO6SMFhqH2MU7pIwZDjqfmaLcOjumY-87HunPCBhQboG66ABtvhK7-_3ibb%26_nc_ohc%3DocSAXqbDeYIQ7kNvwFiYF_I%26_nc_oc%3DAdojh2bIiv9REj-vlbA04zCyWV6UJohZu4kwe89_gIeXG5KHUEqlnlbb4rHZ-T_va6c%26_nc_zt%3D23%26_nc_ht%3Dscontent.fmnl43-1.fna%26_nc_gid%3DEtSbMqXs28aPIWarIuvKow%26_nc_ss%3D7b2a8%26oh%3D00_Af013eIBZhCaFqOmBzTB86iXz4iP-kR5CqIcKILKZFKXHw%26oe%3D69F4FDF6/https/scontent.fmnl43-1.fna.fbcdn.net/v/t39.30808-6/490473984_679135341171958_6103256923955071503_n.jpg?format=webp&width=225&height=300" />
           <div class="content">
-            <h3>RecommReservation 3</h3>
+            <h3>Mt. Halcon</h3>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
+              Named after one of the Philippines’ most iconic mountains, this room blends simplicity with comfort. Its warm ambiance and thoughtfully arranged space create a soothing environment, ideal for rest and quiet moments during your stay.
             </p>
             <a href="omsim.php" class="btn">Reserve</a>
           </div>
